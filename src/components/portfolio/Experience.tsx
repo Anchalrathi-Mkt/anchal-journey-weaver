@@ -529,13 +529,6 @@ export function Experience() {
             <p className="mt-10 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
               {firstMeridian.closing}
             </p>
-
-            <div className="mt-14 border-t border-border pt-8">
-              <Label>Business development exposure</Label>
-              <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-                {firstMeridian.bizDev}
-              </p>
-            </div>
           </WorkArea>
         </div>
 
