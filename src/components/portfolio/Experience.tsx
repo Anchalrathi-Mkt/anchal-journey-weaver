@@ -352,12 +352,12 @@ export function Experience() {
             </p>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {[
+              {([
                 ["April", hubspotApril.url],
                 ["May", hubspotMay.url],
                 ["June", hubspotJune.url],
                 ["July", hubspotJuly.url],
-              ].map(([month, src], i) => {
+              ] as const).map(([month, src], i) => {
                 const alt = `HubSpot campaign performance — ${month} 2026`;
                 return (
                   <Reveal key={src} delay={i * 60}>
