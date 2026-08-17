@@ -335,16 +335,16 @@ export function Experience() {
             </p>
 
             <div className="no-scrollbar mt-12 -mx-6 flex snap-x gap-6 overflow-x-auto px-6 md:mx-0 md:px-0">
-              {[
-                ["/images/hubspot-april.jpg", "HubSpot campaign performance — April"],
-                ["/images/hubspot-may.jpg", "HubSpot campaign performance — May"],
-                ["/images/hubspot-june.jpg", "HubSpot campaign performance — June"],
-                ["/images/hubspot-july.jpg", "HubSpot campaign performance — July"],
-              ].map(([src, alt]) => (
-                <div key={src} className="w-[78vw] shrink-0 snap-start md:w-[calc(50%-12px)]">
-                  <Media src={src} alt={alt} caption={alt} onOpen={() => open(src, alt)} />
-                </div>
-              ))}
+              {["april", "may", "june", "july"].map((month) => {
+                const src = `/images/hubspot-${month}.jpg`;
+                const alt = `HubSpot campaign performance — ${month.charAt(0).toUpperCase()}${month.slice(1)}`;
+                return (
+                  <div key={src} className="w-[78vw] shrink-0 snap-start md:w-[calc(50%-12px)]">
+                    <Media src={src} alt={alt} caption={alt} onOpen={() => open(src, alt)} />
+                  </div>
+                );
+              })}
+
             </div>
           </WorkArea>
 
