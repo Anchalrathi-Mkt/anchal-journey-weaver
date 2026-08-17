@@ -22,11 +22,11 @@ export const intro = {
   headline: "Hi, I'm Anchal.",
   subline: "I work at the intersection of marketing, technology and data.",
   paragraphs: [
-    "I'm a Digital Marketing & Data Analytics professional based in Paris. My experience spans website development, SEO, CRM, marketing campaigns, business development and data analysis.",
-    "I enjoy working across the complete digital journey — from building and optimising websites to managing CRM campaigns, improving search visibility, analysing marketing performance and creating strategies that support business growth.",
-    "My approach combines creative marketing with measurable results. I like understanding how a digital experience works behind the scenes, how audiences interact with it and how data can be used to improve what happens next.",
+    "I am a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics. Throughout my experience, I have worked across multiple areas of the digital marketing ecosystem, including building and optimising websites on Shopware, WordPress and Shopify, managing CRM systems, executing marketing campaigns, improving search visibility and analysing performance data to support business growth.",
+    "Most recently, I completed a 5 month Marketing Internship at Latina S.A.M. in Monaco, where I designed and built the company's website on Shopware, worked on SEO initiatives, managed HubSpot CRM and marketing campaigns, supported LinkedIn content and contributed to marketing performance reporting and dashboard development on Power BI.",
+    "My experience has helped me develop a strong understanding of how marketing, technology and data work together to improve digital performance, strengthen customer engagement and support measurable business results.",
   ],
-  facts: ["Based in Paris, France", "Digital Marketing & Data Analytics", "Open to opportunities"],
+  facts: ["Based in Paris, France", "Marketing & Sales Professional", "Open to opportunities"],
 };
 
 export const experienceIntro = {
