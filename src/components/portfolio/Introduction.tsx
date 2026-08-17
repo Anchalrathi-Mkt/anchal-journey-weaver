@@ -73,9 +73,11 @@ export function Introduction() {
                 </div>
               ) : (
                 <img
+                  ref={imgRef}
                   src={profile.portrait}
                   alt="Portrait of Anchal Rathi"
-                  onError={() => setFailed(true)}
+                  onError={onError}
+
                   className="h-full w-full object-cover"
                 />
               )}
