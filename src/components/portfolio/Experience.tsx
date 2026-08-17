@@ -1,10 +1,6 @@
 import { useState } from "react";
-import {
-  experienceIntro,
-  firstMeridian,
-  latina,
-  ssBeverages,
-} from "@/data/portfolio";
+import { useI18n } from "@/i18n";
+import { latinaWebsite } from "@/data/portfolio";
 import { Reveal, Label, Rule, Media, Lightbox, ListColumns } from "./primitives";
 import latinaHome from "@/assets/latina-home.jpg.asset.json";
 import latinaAbout from "@/assets/latina-about.png.asset.json";
@@ -20,9 +16,6 @@ import hubspotJuly from "@/assets/hubspot-july.jpg.asset.json";
 import powerbiDashboard from "@/assets/powerbi-dashboard.jpg.asset.json";
 import linkedinMinuty from "@/assets/linkedin-minuty.jpg.asset.json";
 import linkedinCampari from "@/assets/linkedin-campari.jpg.asset.json";
-
-
-
 
 function CompanyHead({
   index,
@@ -86,6 +79,8 @@ function WorkArea({
 export function Experience() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   const open = (src: string, alt: string) => setLightbox({ src, alt });
+  const { t } = useI18n();
+  const { experienceIntro, latina, firstMeridian, ssBeverages, ui } = t;
 
   return (
     <section id="experience" className="border-t border-border">
@@ -101,7 +96,7 @@ export function Experience() {
         {/* ---------------- LATINA ---------------- */}
         <div className="mt-24 md:mt-36">
           <CompanyHead
-            index="Experience 01"
+            index={ui.experienceIndex[0] ?? "01"}
             company={latina.company}
             role={latina.role}
             location={latina.location}
@@ -110,43 +105,31 @@ export function Experience() {
           />
 
           {/* Work area 01 — website */}
-          <WorkArea
-            label="Website Development / Shopware"
-            heading="Building Latina S.A.M.'s corporate website"
-          >
+          <WorkArea label={ui.website.label} heading={ui.website.heading}>
             <div className="max-w-[62ch] space-y-5 text-[17px] leading-[1.8] text-muted-foreground">
-              <p>
-                One of my main projects was designing and building the Latina S.A.M. corporate
-                website using Shopware.
-              </p>
-              <p>
-                I worked on translating the company's business information into a clear digital
-                structure, making it easier for visitors to understand the company, its product
-                portfolio, services, international markets and distribution capabilities.
-              </p>
+              <p>{ui.website.p1}</p>
+              <p>{ui.website.p2}</p>
             </div>
 
             <div className="mt-12">
-              <Label>My responsibilities included</Label>
+              <Label>{ui.website.responsibilitiesLabel}</Label>
               <div className="mt-5">
                 <ListColumns items={latina.responsibilities} columns={2} />
               </div>
             </div>
 
             <p className="mt-10 text-[15px] text-muted-foreground">
-              Content was coordinated for multiple languages including{" "}
+              {ui.website.languagesPre}{" "}
               <span className="text-foreground">{latina.languages.join(" · ")}</span>.
             </p>
 
             <p className="mt-8 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              The objective was not only to create a visually professional website, but also to
-              organise the information in a way that made sense for international B2B customers and
-              partners.
+              {ui.website.p3}
             </p>
 
             {/* Sitemap */}
             <div className="mt-14 border-t border-border pt-10">
-              <Label>Website structure</Label>
+              <Label>{ui.website.structureLabel}</Label>
               <ul className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-4">
                 {latina.sitemap.map((page, i) => (
                   <li key={page} className="flex items-center gap-4">
@@ -160,12 +143,13 @@ export function Experience() {
             </div>
 
             <a
-              href={latina.website}
+              href={latinaWebsite}
               target="_blank"
               rel="noopener noreferrer"
               className="group mt-10 inline-block text-[14px] text-accent"
             >
-              <span className="rule-link">Visit Website</span> <span className="arrow-shift">↗</span>
+              <span className="rule-link">{ui.website.visit}</span>{" "}
+              <span className="arrow-shift">↗</span>
             </a>
 
             {/* Gallery: real screenshots of the Latina S.A.M. website */}
@@ -216,25 +200,19 @@ export function Experience() {
                 </Reveal>
               </div>
             </div>
-
           </WorkArea>
 
           {/* Work area 02 — SEO */}
-          <WorkArea
-            label="SEO / Organic Search"
-            heading="Improving search visibility for Wine & Spirits Europe"
-          >
+          <WorkArea label={ui.seo.label} heading={ui.seo.heading}>
             <p className="max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              Alongside website development, I worked on SEO for the Wine & Spirits Europe website,
-              focusing on improving its search visibility, keyword optimisation and organic
-              discoverability.
+              {ui.seo.p1}
             </p>
 
             <Reveal>
               <div className="mt-14 flex flex-wrap items-end gap-x-12 gap-y-8">
                 <div>
                   <span className="display block text-[clamp(3.5rem,9vw,6rem)]">14%</span>
-                  <span className="label-xs mt-2">Initial search visibility</span>
+                  <span className="label-xs mt-2">{ui.seo.initial}</span>
                 </div>
                 <span aria-hidden className="mb-10 text-[28px] font-light text-accent">
                   ⟶
@@ -243,23 +221,21 @@ export function Experience() {
                   <span className="display block text-[clamp(3.5rem,9vw,6rem)] text-accent">
                     56%
                   </span>
-                  <span className="label-xs mt-2">Final search visibility</span>
+                  <span className="label-xs mt-2">{ui.seo.final}</span>
                 </div>
               </div>
             </Reveal>
 
             <p className="mt-8 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              Search visibility increased from 14% to 56% during the optimisation period.
+              {ui.seo.p2}
             </p>
 
             <div className="mt-14">
-              <Label>What I worked on</Label>
+              <Label>{ui.seo.workedLabel}</Label>
               <div className="mt-5">
                 <ListColumns items={latina.seoWork} columns={2} />
               </div>
-              <p className="mt-6 text-[15px] text-muted-foreground">
-                Rank Math was among the tools used to support on-page optimisation and monitoring.
-              </p>
+              <p className="mt-6 text-[15px] text-muted-foreground">{ui.seo.rankMath}</p>
             </div>
 
             <div className="mt-14 grid items-start gap-10 md:grid-cols-2">
@@ -267,7 +243,7 @@ export function Experience() {
                 <Media
                   src={seoBefore.url}
                   alt="Semrush domain overview before optimisation showing 14% AI visibility"
-                  caption="Before — 14% visibility, 16 organic sessions"
+                  caption={ui.seo.beforeCaption}
                   ratio="16 / 10"
                   browser
                   onOpen={() => open(seoBefore.url, "Semrush overview — before")}
@@ -277,24 +253,19 @@ export function Experience() {
                 <Media
                   src={seoAfter.url}
                   alt="Semrush domain overview after optimisation showing 56% AI visibility"
-                  caption="After — 56% visibility, 16.2K organic traffic"
+                  caption={ui.seo.afterCaption}
                   ratio="16 / 10"
                   browser
                   onOpen={() => open(seoAfter.url, "Semrush overview — after")}
                 />
               </Reveal>
             </div>
-
           </WorkArea>
 
           {/* Work area 03 — HubSpot */}
-          <WorkArea
-            label="HubSpot CRM / Email Marketing"
-            heading="Managing CRM and marketing campaigns"
-          >
+          <WorkArea label={ui.hubspot.label} heading={ui.hubspot.heading}>
             <p className="max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              I worked with HubSpot CRM to organise marketing activity, manage contacts, create
-              campaigns and analyse how audiences interacted with offers and email communication.
+              {ui.hubspot.p1}
             </p>
 
             <ol className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-4 border-y border-border py-6">
@@ -312,7 +283,7 @@ export function Experience() {
 
             <div className="mt-12 grid gap-12 md:grid-cols-2">
               <div>
-                <h5 className="font-serif text-[24px] font-light">CRM Management</h5>
+                <h5 className="font-serif text-[24px] font-light">{ui.hubspot.crmManagement}</h5>
                 <ul className="mt-5">
                   {latina.crmManagement.map((i) => (
                     <li
@@ -325,7 +296,9 @@ export function Experience() {
                 </ul>
               </div>
               <div>
-                <h5 className="font-serif text-[24px] font-light">Campaign Management</h5>
+                <h5 className="font-serif text-[24px] font-light">
+                  {ui.hubspot.campaignManagement}
+                </h5>
                 <ul className="mt-5">
                   {latina.campaignManagement.map((i) => (
                     <li
@@ -351,53 +324,40 @@ export function Experience() {
             </div>
 
             <p className="mt-12 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              Tracking campaign performance made it possible to compare engagement across different
-              periods and better understand which offers generated stronger audience interest.
+              {ui.hubspot.p2}
             </p>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {([
-                ["April", hubspotApril.url],
-                ["May", hubspotMay.url],
-                ["June", hubspotJune.url],
-                ["July", hubspotJuly.url],
-              ] as const).map(([month, src], i) => {
-                const alt = `HubSpot campaign performance — ${month} 2026`;
-                return (
-                  <Reveal key={src} delay={i * 60}>
-                    <Media
-                      src={src}
-                      alt={alt}
-                      caption={`${month} — emails sent and open rate`}
-                      ratio="16 / 10"
-                      browser
-                      onOpen={() => open(src, alt)}
-                    />
-                  </Reveal>
-                );
-              })}
+              {[hubspotApril.url, hubspotMay.url, hubspotJune.url, hubspotJuly.url].map(
+                (src, i) => {
+                  const month = ui.hubspot.months[i] ?? "";
+                  const alt = `HubSpot campaign performance — ${month} 2026`;
+                  return (
+                    <Reveal key={src} delay={i * 60}>
+                      <Media
+                        src={src}
+                        alt={alt}
+                        caption={`${month} — ${ui.hubspot.monthCaption}`}
+                        ratio="16 / 10"
+                        browser
+                        onOpen={() => open(src, alt)}
+                      />
+                    </Reveal>
+                  );
+                },
+              )}
             </div>
-
           </WorkArea>
 
           {/* Work area 04 — Power BI */}
-          <WorkArea
-            label="Power BI / Marketing Analytics"
-            heading="Turning marketing data into clearer insights"
-          >
+          <WorkArea label={ui.powerbi.label} heading={ui.powerbi.heading}>
             <div className="max-w-[62ch] space-y-5 text-[17px] leading-[1.8] text-muted-foreground">
-              <p>
-                To make CRM and campaign performance easier to understand, I worked on marketing
-                reporting and built a Power BI dashboard for tracking marketing and CRM activity.
-              </p>
-              <p>
-                The objective was to bring relevant KPIs into a clearer visual format so campaign
-                activity, engagement and lead performance could be monitored more efficiently.
-              </p>
+              <p>{ui.powerbi.p1}</p>
+              <p>{ui.powerbi.p2}</p>
             </div>
 
             <div className="mt-12">
-              <Label>Areas analysed</Label>
+              <Label>{ui.powerbi.areasLabel}</Label>
               <p className="mt-5 text-[17px] leading-[2]">
                 {latina.analyticsAreas.map((a, i) => (
                   <span key={a}>
@@ -415,48 +375,46 @@ export function Experience() {
             <Reveal>
               <blockquote className="mt-16 border-l border-accent pl-8">
                 <p className="display max-w-[24ch] text-[clamp(1.6rem,3.4vw,2.4rem)]">
-                  Data becomes useful when it helps someone understand what happened, why it
-                  happened and what to do next.
+                  {ui.powerbi.quote}
                 </p>
               </blockquote>
             </Reveal>
           </WorkArea>
 
-            <div className="mt-14">
-              <Reveal>
-                <Media
-                  src={powerbiDashboard.url}
-                  alt="HubSpot Marketing Performance Dashboard in Power BI — April to July 2026 overview"
-                  caption="Marketing performance dashboard — Power BI (April – July 2026)"
-                  ratio="16 / 9"
-                  browser
-                  onOpen={() => open(powerbiDashboard.url, "Power BI — HubSpot Marketing Performance Dashboard")}
-                />
-              </Reveal>
-            </div>
-
+          <div className="mt-14">
+            <Reveal>
+              <Media
+                src={powerbiDashboard.url}
+                alt="HubSpot Marketing Performance Dashboard in Power BI — April to July 2026 overview"
+                caption={ui.powerbi.caption}
+                ratio="16 / 9"
+                browser
+                onOpen={() =>
+                  open(powerbiDashboard.url, "Power BI — HubSpot Marketing Performance Dashboard")
+                }
+              />
+            </Reveal>
+          </div>
 
           {/* Work area 05 — LinkedIn */}
-          <WorkArea label="LinkedIn / B2B Content" heading="Developing the company's LinkedIn presence">
+          <WorkArea label={ui.linkedin.label} heading={ui.linkedin.heading}>
             <p className="max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              I also managed content for Latina S.A.M.'s LinkedIn page, helping maintain a more
-              consistent B2B presence and communicate the company's work, industry knowledge and
-              brand story.
+              {ui.linkedin.p1}
             </p>
 
             <div className="mt-12">
-              <Label>Work included</Label>
+              <Label>{ui.linkedin.workLabel}</Label>
               <div className="mt-5">
                 <ListColumns items={latina.linkedinWork} columns={2} />
               </div>
             </div>
 
             <div className="mt-12">
-              <Label>Content themes</Label>
+              <Label>{ui.linkedin.themesLabel}</Label>
               <p className="mt-5 font-serif text-[clamp(1.3rem,2.6vw,1.9rem)] font-light leading-[1.7]">
-                {latina.contentThemes.map((t, i) => (
-                  <span key={t}>
-                    {t}
+                {latina.contentThemes.map((t2, i) => (
+                  <span key={t2}>
+                    {t2}
                     {i < latina.contentThemes.length - 1 && (
                       <span className="mx-3 text-border-strong">•</span>
                     )}
@@ -470,12 +428,12 @@ export function Experience() {
                 {
                   src: linkedinMinuty.url,
                   alt: "Latina S.A.M. LinkedIn post featuring Château Minuty",
-                  caption: "Brand partner spotlight — Minuty",
+                  caption: ui.linkedin.caption1,
                 },
                 {
                   src: linkedinCampari.url,
                   alt: "Latina S.A.M. LinkedIn post — Where Luxury Begins",
-                  caption: "Brand storytelling — Where Luxury Begins, Monaco",
+                  caption: ui.linkedin.caption2,
                 },
               ].map((item, i) => (
                 <Reveal key={item.src} delay={i * 60}>
@@ -495,7 +453,7 @@ export function Experience() {
         {/* ---------------- FIRSTMERIDIAN ---------------- */}
         <div className="mt-32 border-t border-border pt-20 md:mt-44">
           <CompanyHead
-            index="Experience 02"
+            index={ui.experienceIndex[1] ?? "02"}
             company={firstMeridian.company}
             role={firstMeridian.role}
             location={firstMeridian.location}
@@ -503,13 +461,13 @@ export function Experience() {
             opening={firstMeridian.opening}
           />
 
-          <WorkArea label="Lead Generation / Business Development" heading="B2B Lead Generation">
+          <WorkArea label={ui.fm.label} heading={ui.fm.heading}>
             <p className="max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
               {firstMeridian.leadGenText}
             </p>
 
             <div className="mt-12">
-              <Label>Responsibilities</Label>
+              <Label>{ui.fm.responsibilitiesLabel}</Label>
               <div className="mt-5">
                 <ListColumns items={firstMeridian.responsibilities} columns={2} />
               </div>
@@ -535,7 +493,7 @@ export function Experience() {
         {/* ---------------- S.S. BEVERAGES ---------------- */}
         <div className="mt-32 border-t border-border pt-20 md:mt-44">
           <CompanyHead
-            index="Experience 03"
+            index={ui.experienceIndex[2] ?? "03"}
             company={ssBeverages.company}
             role={ssBeverages.role}
             location={ssBeverages.location}
@@ -545,12 +503,12 @@ export function Experience() {
 
           <div className="mt-20 grid gap-14 border-t border-border pt-12 md:grid-cols-2 md:gap-20">
             <Reveal>
-              <Label>Organic</Label>
-              <h4 className="display mt-4 text-[clamp(1.7rem,3.2vw,2.4rem)]">SEO</h4>
+              <Label>{ui.ss.organicLabel}</Label>
+              <h4 className="display mt-4 text-[clamp(1.7rem,3.2vw,2.4rem)]">
+                {ui.ss.organicHeading}
+              </h4>
               <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-                I developed on-page and off-page SEO strategies, conducted technical SEO audits,
-                optimised website content and built quality backlinks, helping increase organic
-                traffic by 40% and improve overall search visibility.
+                {ui.ss.organicText}
               </p>
               <ul className="mt-8">
                 {ssBeverages.organic.map((i) => (
@@ -564,14 +522,14 @@ export function Experience() {
               </ul>
               <div className="mt-10">
                 <span className="display block text-[clamp(3rem,7vw,4.6rem)] text-accent">+40%</span>
-                <span className="label-xs mt-2">Increase in organic traffic</span>
+                <span className="label-xs mt-2">{ui.ss.organicMetric}</span>
               </div>
             </Reveal>
 
             <Reveal delay={80} className="md:border-l md:border-border md:pl-20">
-              <Label>Paid</Label>
+              <Label>{ui.ss.paidLabel}</Label>
               <h4 className="display mt-4 text-[clamp(1.7rem,3.2vw,2.4rem)]">
-                Performance Marketing
+                {ui.ss.paidHeading}
               </h4>
               <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
                 {ssBeverages.paidText}
@@ -588,9 +546,7 @@ export function Experience() {
               </ul>
               <div className="mt-10">
                 <span className="display block text-[clamp(3rem,7vw,4.6rem)]">+15%</span>
-                <span className="label-xs mt-2">
-                  Increase in website traffic through paid campaigns
-                </span>
+                <span className="label-xs mt-2">{ui.ss.paidMetric}</span>
               </div>
             </Reveal>
           </div>
@@ -606,7 +562,11 @@ export function Experience() {
         </Reveal>
       </div>
 
-      <Lightbox src={lightbox?.src ?? null} alt={lightbox?.alt ?? ""} onClose={() => setLightbox(null)} />
+      <Lightbox
+        src={lightbox?.src ?? null}
+        alt={lightbox?.alt ?? ""}
+        onClose={() => setLightbox(null)}
+      />
     </section>
   );
 }
