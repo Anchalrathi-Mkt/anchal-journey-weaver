@@ -50,9 +50,10 @@ export function Education() {
         <Reveal>
           <Label>{education.label}</Label>
           <h2 className="display mt-6 max-w-[16ch] text-[clamp(2.4rem,5.4vw,3.8rem)]">
-            {education.heading}
+            Education
           </h2>
         </Reveal>
+
 
         <Reveal delay={80}>
           <div className="mt-20 border-t border-border pt-10">
