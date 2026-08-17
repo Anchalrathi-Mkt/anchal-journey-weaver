@@ -119,7 +119,9 @@ export function Contact() {
       <div className="mx-auto max-w-[1280px] px-6 py-28 md:px-10 md:py-40">
         <Reveal>
           <span className="label-xs block !text-ink-foreground opacity-60">04 / Contact</span>
-          <h2 className="display mt-6 text-[clamp(3rem,8vw,5.4rem)]">Let's connect.</h2>
+          <h2 className="display mt-6 text-[clamp(3rem,8vw,5.4rem)]">
+            Let's <span className="script-em">connect.</span>
+          </h2>
         </Reveal>
 
         <div className="mt-12 grid gap-12 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:gap-20">
@@ -131,13 +133,10 @@ export function Contact() {
               </p>
               <p>Currently based in Paris and open to opportunities in France and Europe.</p>
             </div>
-            <a
-              href={`mailto:${profile.email}`}
-              className="group mt-12 inline-block text-[14px] tracking-[0.06em]"
-            >
-              <span className="rule-link">Send me an email</span>{" "}
-              <span className="arrow-shift">↗</span>
+            <a href={`mailto:${profile.email}`} className="btn-clay mt-12">
+              Send me an email
             </a>
+
           </Reveal>
 
           <Reveal delay={140}>
