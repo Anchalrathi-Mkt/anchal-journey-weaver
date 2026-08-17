@@ -17,6 +17,8 @@ import hubspotApril from "@/assets/hubspot-april.jpg.asset.json";
 import hubspotMay from "@/assets/hubspot-may.jpg.asset.json";
 import hubspotJune from "@/assets/hubspot-june.jpg.asset.json";
 import hubspotJuly from "@/assets/hubspot-july.jpg.asset.json";
+import powerbiDashboard from "@/assets/powerbi-dashboard.jpg.asset.json";
+
 
 
 
