@@ -8,8 +8,9 @@ export function Skills() {
         <Reveal>
           <Label>02 / Skills</Label>
           <h2 className="display mt-6 max-w-[16ch] text-[clamp(2.4rem,5.4vw,3.8rem)]">
-            The tools and disciplines behind my work.
+            The <span className="script-em">tools</span> and disciplines behind my work.
           </h2>
+
         </Reveal>
 
         <div className="mt-20 grid gap-14 md:grid-cols-2 lg:grid-cols-3">
