@@ -43,9 +43,13 @@
   /* #1B1A18 */
   --ink: oklch(0.216 0.004 67);
   --ink-foreground: oklch(0.958 0.011 84.5);
+  /* warm taupe block — #C9B4A4 */
+  --clay: oklch(0.786 0.028 55);
+  --clay-foreground: oklch(0.196 0.004 67);
   --border: oklch(0.196 0.004 67 / 0.15);
   --border-strong: oklch(0.196 0.004 67 / 0.35);
 }
+
 
 @layer base {
   * {
