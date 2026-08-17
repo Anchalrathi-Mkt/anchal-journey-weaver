@@ -18,7 +18,7 @@ export function Introduction() {
             className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35"
           />
         )}
-        <div className="mx-auto flex min-h-[68vh] max-w-[1280px] flex-col items-center justify-center px-6 py-24 text-center md:px-10 md:py-32">
+        <div className="mx-auto flex min-h-[560px] max-w-[1280px] flex-col items-center justify-center px-6 py-24 text-center md:px-10 md:py-32">
           <Reveal>
             <p className="nav-link text-ink-foreground/70">The mission statement</p>
           </Reveal>
@@ -33,8 +33,9 @@ export function Introduction() {
             </h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mt-8 max-w-[46ch] text-[15px] leading-[1.85] text-ink-foreground/75">
-              {intro.subline}
+            <p className="mt-8 max-w-[52ch] text-[15px] leading-[1.85] text-ink-foreground/75">
+              Marketing &amp; Sales professional — SEO, CRM, website development and analytics.
+              Currently based in Paris, France.
             </p>
           </Reveal>
           <Reveal delay={280}>
@@ -60,7 +61,7 @@ export function Introduction() {
         <div className="grid items-start gap-14 lg:grid-cols-[42fr_58fr] lg:gap-24">
           <Reveal>
             <div className="relative">
-              <div className="absolute -left-4 -top-4 hidden h-full w-full bg-clay md:block" />
+              <div className="absolute -left-6 -top-6 hidden h-full w-full bg-clay md:block" />
               <div className="relative bg-surface px-8 py-12 md:px-12 md:py-16">
                 <p className="nav-link">{intro.label}</p>
                 <p className="display mt-8 text-[clamp(2rem,4.4vw,3.1rem)]">
