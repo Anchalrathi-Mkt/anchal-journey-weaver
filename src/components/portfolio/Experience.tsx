@@ -151,54 +151,55 @@ export function Experience() {
               <span className="rule-link">Visit Website</span> <span className="arrow-shift">↗</span>
             </a>
 
-            {/* Gallery: one hero + two smaller + services + mobile */}
+            {/* Gallery: real screenshots of the Latina S.A.M. website */}
             <div className="mt-14 space-y-6">
               <Reveal>
                 <Media
-                  src="/images/latina-home.jpg"
-                  alt="Latina S.A.M. website home page"
+                  src={latinaHome.url}
+                  alt="Latina S.A.M. website home page — Champagne & Premium Spirits hero"
                   browser
                   ratio="16 / 9"
-                  onOpen={() => open("/images/latina-home.jpg", "Latina S.A.M. website home page")}
+                  onOpen={() => open(latinaHome.url, "Latina S.A.M. — Home")}
                 />
               </Reveal>
               <div className="grid gap-6 md:grid-cols-2">
                 <Reveal>
                   <Media
-                    src="/images/latina-about.jpg"
-                    alt="Latina S.A.M. website about page"
+                    src={latinaAbout.url}
+                    alt="Latina S.A.M. website About Us section"
                     browser
-                    onOpen={() => open("/images/latina-about.jpg", "Latina about page")}
+                    onOpen={() => open(latinaAbout.url, "Latina S.A.M. — About / Our Story")}
                   />
                 </Reveal>
                 <Reveal delay={80}>
                   <Media
-                    src="/images/latina-products.jpg"
-                    alt="Latina S.A.M. website products page"
+                    src={latinaProducts.url}
+                    alt="Latina S.A.M. website premium product categories"
                     browser
-                    onOpen={() => open("/images/latina-products.jpg", "Latina products page")}
+                    onOpen={() => open(latinaProducts.url, "Latina S.A.M. — Products")}
                   />
                 </Reveal>
               </div>
               <div className="grid gap-6 md:grid-cols-[2fr_1fr]">
                 <Reveal>
                   <Media
-                    src="/images/latina-services.jpg"
-                    alt="Latina S.A.M. website services page"
+                    src={latinaPartners.url}
+                    alt="Latina S.A.M. website featured brand partners section"
                     browser
-                    onOpen={() => open("/images/latina-services.jpg", "Latina services page")}
+                    onOpen={() => open(latinaPartners.url, "Latina S.A.M. — Partners")}
                   />
                 </Reveal>
                 <Reveal delay={80}>
                   <Media
-                    src="/images/latina-mobile.jpg"
-                    alt="Latina S.A.M. website on mobile"
+                    src={latinaMobile.url}
+                    alt="Latina S.A.M. Markets & Channels page on mobile"
                     ratio="9 / 16"
-                    onOpen={() => open("/images/latina-mobile.jpg", "Latina mobile view")}
+                    onOpen={() => open(latinaMobile.url, "Latina S.A.M. — Markets (mobile)")}
                   />
                 </Reveal>
               </div>
             </div>
+
           </WorkArea>
 
           {/* Work area 02 — SEO */}
