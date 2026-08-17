@@ -347,16 +347,28 @@ export function Experience() {
             </p>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {["april", "may", "june", "july"].map((month, i) => {
-                const src = `/images/hubspot-${month}.jpg`;
-                const alt = `HubSpot campaign performance — ${month.charAt(0).toUpperCase()}${month.slice(1)}`;
+              {[
+                ["April", hubspotApril.url],
+                ["May", hubspotMay.url],
+                ["June", hubspotJune.url],
+                ["July", hubspotJuly.url],
+              ].map(([month, src], i) => {
+                const alt = `HubSpot campaign performance — ${month} 2026`;
                 return (
                   <Reveal key={src} delay={i * 60}>
-                    <Media src={src} alt={alt} caption={alt} ratio="4 / 3" onOpen={() => open(src, alt)} />
+                    <Media
+                      src={src}
+                      alt={alt}
+                      caption={`${month} — emails sent and open rate`}
+                      ratio="16 / 10"
+                      browser
+                      onOpen={() => open(src, alt)}
+                    />
                   </Reveal>
                 );
               })}
             </div>
+
           </WorkArea>
 
           {/* Work area 04 — Power BI */}
