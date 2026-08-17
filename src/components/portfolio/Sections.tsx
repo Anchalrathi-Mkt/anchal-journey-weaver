@@ -1,24 +1,26 @@
-import { education, profile, skillGroups } from "@/data/portfolio";
+import { profile } from "@/data/portfolio";
+import { useI18n } from "@/i18n";
 import { Reveal, Label } from "./primitives";
 
 export function Skills() {
+  const { t } = useI18n();
+  const ui = t.ui.skills;
+
   return (
     <section id="skills" className="border-t border-border bg-surface">
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-36">
         <Reveal>
-          <Label>02 / Skills</Label>
+          <Label>{ui.label}</Label>
           <h2 className="display mt-6 max-w-[16ch] text-[clamp(2.4rem,5.4vw,3.8rem)]">
-            Skills &amp; <span className="script-em">Expertise</span>
+            {ui.headingA} <span className="script-em">{ui.headingB}</span>
           </h2>
           <p className="mt-8 max-w-[58ch] text-[17px] leading-[1.85] text-muted-foreground">
-            My work combines marketing strategy, execution and analysis across multiple digital
-            functions.
+            {ui.intro}
           </p>
         </Reveal>
 
-
         <div className="mt-20 grid gap-14 md:grid-cols-2 lg:grid-cols-3">
-          {skillGroups.map((group, i) => (
+          {t.skillGroups.map((group, i) => (
             <Reveal key={group.heading} delay={i * 70}>
               <div className="border-t border-border pt-6">
                 <h3 className="font-serif text-[26px] font-light">{group.heading}</h3>
@@ -44,16 +46,18 @@ export function Skills() {
 }
 
 export function Education() {
+  const { t } = useI18n();
+  const education = t.education;
+
   return (
     <section id="education" className="border-t border-border">
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-36">
         <Reveal>
           <Label>{education.label}</Label>
           <h2 className="display mt-6 max-w-[16ch] text-[clamp(2.4rem,5.4vw,3.8rem)]">
-            Education
+            {education.heading}
           </h2>
         </Reveal>
-
 
         <Reveal delay={80}>
           <div className="mt-20 border-t border-border pt-10">
@@ -84,10 +88,10 @@ export function Education() {
 
         <Reveal delay={140}>
           <div className="mt-24 border-t border-border pt-10">
-            <Label>Additional</Label>
+            <Label>{education.additional}</Label>
             <div className="mt-8 grid gap-10 text-[15px] md:grid-cols-3">
               <div>
-                <p className="label-xs !text-foreground">Languages</p>
+                <p className="label-xs !text-foreground">{education.languagesLabel}</p>
                 <ul className="mt-3 space-y-1.5 text-muted-foreground">
                   {education.languages.map((l) => (
                     <li key={l}>{l}</li>
@@ -95,7 +99,7 @@ export function Education() {
                 </ul>
               </div>
               <div>
-                <p className="label-xs !text-foreground">Certifications</p>
+                <p className="label-xs !text-foreground">{education.certificationsLabel}</p>
                 <ul className="mt-3 space-y-1.5 text-muted-foreground">
                   {education.certifications.map((c) => (
                     <li key={c}>{c}</li>
@@ -103,7 +107,7 @@ export function Education() {
                 </ul>
               </div>
               <div>
-                <p className="label-xs !text-foreground">Achievements</p>
+                <p className="label-xs !text-foreground">{education.achievementsLabel}</p>
                 <ul className="mt-3 space-y-1.5 text-muted-foreground">
                   {education.achievements.map((a) => (
                     <li key={a}>{a}</li>
@@ -119,28 +123,28 @@ export function Education() {
 }
 
 export function Contact() {
+  const { t } = useI18n();
+  const ui = t.ui.contact;
+
   return (
     <section id="contact" className="bg-ink text-ink-foreground">
       <div className="mx-auto max-w-[1280px] px-6 py-28 md:px-10 md:py-40">
         <Reveal>
-          <span className="label-xs block !text-ink-foreground opacity-60">04 / Contact</span>
+          <span className="label-xs block !text-ink-foreground opacity-60">{ui.label}</span>
           <h2 className="display mt-6 text-[clamp(3rem,8vw,5.4rem)]">
-            Let's <span className="script-em">connect.</span>
+            {ui.headingA} <span className="script-em">{ui.headingB}</span>
           </h2>
         </Reveal>
 
         <div className="mt-12 grid gap-12 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:gap-20">
           <Reveal delay={80}>
             <div className="max-w-[54ch] space-y-5 text-[17px] leading-[1.8] opacity-75">
-              <p>
-                I am interested in opportunities where I can combine digital marketing, technology
-                and data to contribute to meaningful business growth.
-              </p>
-              <p>Paris, France</p>
+              <p>{ui.p1}</p>
+              <p>{ui.location}</p>
             </div>
             <div className="mt-12 flex flex-wrap items-center gap-6">
               <a href={`mailto:${profile.email}`} className="btn-clay">
-                Email Me
+                {ui.emailMe}
               </a>
               <a
                 href={profile.linkedin}
@@ -153,11 +157,12 @@ export function Contact() {
             </div>
           </Reveal>
 
-
           <Reveal delay={140}>
             <div className="space-y-8 md:pt-2">
               <div>
-                <span className="label-xs block !text-ink-foreground opacity-60">Email</span>
+                <span className="label-xs block !text-ink-foreground opacity-60">
+                  {ui.emailLabel}
+                </span>
                 <a
                   href={`mailto:${profile.email}`}
                   className="rule-link mt-2 inline-block font-serif text-[clamp(1.2rem,2.4vw,1.7rem)] font-light"
@@ -166,7 +171,9 @@ export function Contact() {
                 </a>
               </div>
               <div>
-                <span className="label-xs block !text-ink-foreground opacity-60">LinkedIn</span>
+                <span className="label-xs block !text-ink-foreground opacity-60">
+                  {ui.linkedinLabel}
+                </span>
                 <a
                   href={profile.linkedin}
                   target="_blank"
@@ -186,21 +193,22 @@ export function Contact() {
 }
 
 export function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-4 border-t border-ink-foreground/15 px-6 py-8 md:px-10">
         <div className="flex flex-wrap items-center gap-6">
           <span className="font-serif text-[17px] uppercase tracking-[0.24em]">Anchal Rathi</span>
-          <span className="label-xs !text-ink-foreground opacity-60">Paris, France</span>
+          <span className="label-xs !text-ink-foreground opacity-60">{t.ui.footer.location}</span>
         </div>
         <div className="flex items-center gap-8">
-          <span className="label-xs !text-ink-foreground opacity-60">© 2026 Anchal Rathi</span>
+          <span className="label-xs !text-ink-foreground opacity-60">{t.ui.footer.copyright}</span>
           <a href="#introduction" className="label-xs rule-link !text-ink-foreground">
-            Back to top ↑
+            {t.ui.footer.backToTop}
           </a>
         </div>
       </div>
-
     </footer>
   );
 }
