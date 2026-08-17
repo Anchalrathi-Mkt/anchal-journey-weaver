@@ -31,11 +31,12 @@ export const intro = {
 
 export const experienceIntro = {
   label: "01 / Experience",
-  heading: "What I've worked on.",
-  text: "My experience has allowed me to work across different parts of the digital marketing ecosystem — website development, SEO, CRM, marketing analytics, social media, paid marketing and business development.",
+  heading: "What I have worked on so far.",
+  text: "My experience spans website development, SEO, CRM, campaign management, data analytics, LinkedIn marketing and business development across different industries and business contexts.",
   closingQuote:
     "My experience has taught me to look at marketing as a connected system — website, search, CRM, content, campaigns and data all influence one another.",
 };
+
 
 export const latina = {
   company: "Latina S.A.M.",
