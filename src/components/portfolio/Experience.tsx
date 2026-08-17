@@ -466,15 +466,28 @@ export function Experience() {
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {[1, 2].map((n) => {
-                const src = `/images/linkedin-post-0${n}.jpg`;
-                const alt = `LinkedIn content sample ${n} for Latina S.A.M.`;
-                return (
-                  <Reveal key={n} delay={(n - 1) * 60}>
-                    <Media src={src} alt={alt} ratio="1 / 1" onOpen={() => open(src, alt)} />
-                  </Reveal>
-                );
-              })}
+              {[
+                {
+                  src: linkedinMinuty.url,
+                  alt: "Latina S.A.M. LinkedIn post featuring Château Minuty",
+                  caption: "Brand partner spotlight — Minuty",
+                },
+                {
+                  src: linkedinCampari.url,
+                  alt: "Latina S.A.M. LinkedIn post featuring Campari",
+                  caption: "Video content — Campari, Monaco",
+                },
+              ].map((item, i) => (
+                <Reveal key={item.src} delay={i * 60}>
+                  <Media
+                    src={item.src}
+                    alt={item.alt}
+                    ratio="4 / 5"
+                    caption={item.caption}
+                    onOpen={() => open(item.src, item.alt)}
+                  />
+                </Reveal>
+              ))}
             </div>
           </WorkArea>
         </div>
