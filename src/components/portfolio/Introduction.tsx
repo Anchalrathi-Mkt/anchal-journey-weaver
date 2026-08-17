@@ -1,24 +1,18 @@
 import { intro, profile } from "@/data/portfolio";
-import { Reveal, useImageFallback } from "./primitives";
+import { Reveal } from "./primitives";
 
 export function Introduction() {
-  const { failed, imgRef, onError } = useImageFallback();
-
   return (
     <section id="introduction" className="pt-[116px]">
       {/* Editorial statement band */}
-      <div className="relative isolate overflow-hidden bg-ink">
-        {!failed && (
-          <img
-            ref={imgRef}
-            src={profile.portrait}
-            alt=""
-            aria-hidden="true"
-            onError={onError}
-            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35"
-          />
-        )}
+      <div
+        className="relative isolate overflow-hidden bg-ink"
+        style={{
+          backgroundImage: `radial-gradient(120% 90% at 50% 0%, color-mix(in oklab, var(--color-accent) 30%, transparent), transparent 70%)`,
+        }}
+      >
         <div className="mx-auto flex min-h-[560px] max-w-[1280px] flex-col items-center justify-center px-6 py-24 text-center md:px-10 md:py-32">
+
           <Reveal>
             <p className="nav-link text-ink-foreground/70">The mission statement</p>
           </Reveal>
