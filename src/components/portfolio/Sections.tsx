@@ -133,16 +133,26 @@ export function Contact() {
           <Reveal delay={80}>
             <div className="max-w-[54ch] space-y-5 text-[17px] leading-[1.8] opacity-75">
               <p>
-                I'm interested in opportunities where I can combine digital marketing, technology
-                and data to create measurable business impact.
+                I am interested in opportunities where I can combine digital marketing, technology
+                and data to contribute to meaningful business growth.
               </p>
-              <p>Currently based in Paris and open to opportunities in France and Europe.</p>
+              <p>Paris, France</p>
             </div>
-            <a href={`mailto:${profile.email}`} className="btn-clay mt-12">
-              Send me an email
-            </a>
-
+            <div className="mt-12 flex flex-wrap items-center gap-6">
+              <a href={`mailto:${profile.email}`} className="btn-clay">
+                Email Me
+              </a>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link rule-link !text-ink-foreground opacity-80"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
           </Reveal>
+
 
           <Reveal delay={140}>
             <div className="space-y-8 md:pt-2">
