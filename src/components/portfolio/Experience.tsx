@@ -547,6 +547,11 @@ export function Experience() {
             <Reveal>
               <Label>Organic</Label>
               <h4 className="display mt-4 text-[clamp(1.7rem,3.2vw,2.4rem)]">SEO</h4>
+              <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                I developed on-page and off-page SEO strategies, conducted technical SEO audits,
+                optimised website content and built quality backlinks, helping increase organic
+                traffic by 40% and improve overall search visibility.
+              </p>
               <ul className="mt-8">
                 {ssBeverages.organic.map((i) => (
                   <li
@@ -568,6 +573,9 @@ export function Experience() {
               <h4 className="display mt-4 text-[clamp(1.7rem,3.2vw,2.4rem)]">
                 Performance Marketing
               </h4>
+              <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                {ssBeverages.paidText}
+              </p>
               <ul className="mt-8">
                 {ssBeverages.paid.map((i) => (
                   <li
