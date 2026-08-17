@@ -18,6 +18,8 @@ import hubspotMay from "@/assets/hubspot-may.jpg.asset.json";
 import hubspotJune from "@/assets/hubspot-june.jpg.asset.json";
 import hubspotJuly from "@/assets/hubspot-july.jpg.asset.json";
 import powerbiDashboard from "@/assets/powerbi-dashboard.jpg.asset.json";
+import linkedinMinuty from "@/assets/linkedin-minuty.jpg.asset.json";
+import linkedinCampari from "@/assets/linkedin-campari.jpg.asset.json";
 
 
 
