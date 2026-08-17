@@ -171,9 +171,9 @@ export function Experience() {
                 <Reveal>
                   <Media
                     src={latinaAbout.url}
-                    alt="Latina S.A.M. website About Us section"
+                    alt="Latina S.A.M. website Mission & Vision section"
                     browser
-                    onOpen={() => open(latinaAbout.url, "Latina S.A.M. — About / Our Story")}
+                    onOpen={() => open(latinaAbout.url, "Latina S.A.M. — Mission & Vision")}
                   />
                 </Reveal>
                 <Reveal delay={80}>
