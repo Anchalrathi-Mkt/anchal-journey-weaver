@@ -82,6 +82,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Anchal Rathi" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Anchal Rathi | Digital Marketing & Data Analytics" },
+      { name: "twitter:title", content: "Anchal Rathi | Digital Marketing & Data Analytics" },
+      { name: "description", content: "Portfolio of Anchal Rathi, a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics." },
+      { property: "og:description", content: "Portfolio of Anchal Rathi, a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics." },
+      { name: "twitter:description", content: "Portfolio of Anchal Rathi, a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e14c2b3b8d26fbad63c5dda264581688/id-preview-668fd52a--ce91ad8f-96aa-4926-a977-28060dafeb7d.lovable.app-1786954172981.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e14c2b3b8d26fbad63c5dda264581688/id-preview-668fd52a--ce91ad8f-96aa-4926-a977-28060dafeb7d.lovable.app-1786954172981.png" },
     ],
     links: [
       {

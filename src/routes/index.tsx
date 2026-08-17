@@ -15,20 +15,20 @@ export const Route = createFileRoute("/")({
     meta: [
       { title },
       { name: "description", content: description },
-      { property: "og:title", content: "Anchal Rathi — Digital Marketing & Data Analytics" },
+      { property: "og:title", content: "Anchal Rathi | Digital Marketing & Data Analytics" },
       {
         property: "og:description",
         content:
-          "Explore my experience across website development, SEO, CRM, HubSpot, marketing analytics, Power BI, LinkedIn marketing and business growth.",
+          "Portfolio of Anchal Rathi, a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics.",
       },
       { property: "og:type", content: "profile" },
       { property: "og:url", content: "https://anchal-rathi.com" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Anchal Rathi — Digital Marketing & Data Analytics" },
+      { name: "twitter:title", content: "Anchal Rathi | Digital Marketing & Data Analytics" },
       {
         name: "twitter:description",
         content:
-          "Explore my experience across website development, SEO, CRM, HubSpot, marketing analytics, Power BI, LinkedIn marketing and business growth.",
+          "Portfolio of Anchal Rathi, a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics.",
       },
     ],
     links: [{ rel: "canonical", href: "https://anchal-rathi.com" }],
