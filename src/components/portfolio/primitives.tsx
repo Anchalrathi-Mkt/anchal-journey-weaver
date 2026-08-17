@@ -1,6 +1,20 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { X } from "lucide-react";
 
+/** Detects missing images, including loads that failed before hydration. */
+export function useImageFallback() {
+  const [failed, setFailed] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const el = imgRef.current;
+    if (el && el.complete && el.naturalWidth === 0) setFailed(true);
+  }, []);
+
+  return { failed, imgRef, onError: () => setFailed(true) };
+}
+
+
 export function Reveal({
   children,
   className = "",
