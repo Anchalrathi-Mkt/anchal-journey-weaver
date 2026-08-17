@@ -197,9 +197,10 @@ export function Lightbox({
 export function ListColumns({ items, columns = 2 }: { items: string[]; columns?: number }) {
   return (
     <ul
-      className="grid gap-x-10 gap-y-0"
-      style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
+      className="grid min-w-0 grid-cols-1 gap-x-10 gap-y-0 sm:[grid-template-columns:var(--cols)]"
+      style={{ ["--cols" as string]: `repeat(${columns}, minmax(0, 1fr))` }}
     >
+
       {items.map((item) => (
         <li
           key={item}
