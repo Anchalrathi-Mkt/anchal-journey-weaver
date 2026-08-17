@@ -189,14 +189,18 @@ export function Footer() {
   return (
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-4 border-t border-ink-foreground/15 px-6 py-8 md:px-10">
-        <span className="label-xs !text-ink-foreground opacity-60">© 2026 Anchal Rathi</span>
-        <div className="flex items-center gap-8">
+        <div className="flex flex-wrap items-center gap-6">
+          <span className="font-serif text-[17px] uppercase tracking-[0.24em]">Anchal Rathi</span>
           <span className="label-xs !text-ink-foreground opacity-60">Paris, France</span>
+        </div>
+        <div className="flex items-center gap-8">
+          <span className="label-xs !text-ink-foreground opacity-60">© 2026 Anchal Rathi</span>
           <a href="#introduction" className="label-xs rule-link !text-ink-foreground">
             Back to top ↑
           </a>
         </div>
       </div>
+
     </footer>
   );
 }
