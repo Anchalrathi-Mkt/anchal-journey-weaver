@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { intro, profile } from "@/data/portfolio";
-import { Reveal, Label } from "./primitives";
+import { Reveal, Label, useImageFallback } from "./primitives";
 
 export function Introduction() {
-  const [failed, setFailed] = useState(false);
+  const { failed, imgRef, onError } = useImageFallback();
+
 
   return (
     <section id="introduction" className="mx-auto max-w-[1280px] px-6 pt-36 pb-24 md:px-10 md:pt-48 md:pb-36">
