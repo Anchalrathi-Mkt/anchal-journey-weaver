@@ -441,7 +441,7 @@ export function Experience() {
             </div>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {[1, 2, 3, 4].map((n) => {
+              {[1, 2].map((n) => {
                 const src = `/images/linkedin-post-0${n}.jpg`;
                 const alt = `LinkedIn content sample ${n} for Latina S.A.M.`;
                 return (
