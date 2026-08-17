@@ -18,24 +18,26 @@ export const nav = [
 ];
 
 export const intro = {
-  label: "Digital Marketing × Data × Technology",
-  headline: "Hi, I'm Anchal.",
-  subline: "I work at the intersection of marketing, technology and data.",
+  label: "Introduction",
+  headline: "I work at the intersection of marketing, technology and data.",
+  subline: "Marketing & Sales professional — SEO, CRM, website development and analytics.",
   paragraphs: [
-    "I am a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics. Throughout my experience, I have worked across multiple areas of the digital marketing ecosystem, including building and optimising websites on Shopware, WordPress and Shopify, managing CRM systems, executing marketing campaigns, improving search visibility and analysing performance data to support business growth.",
-    "Most recently, I completed a 5 month Marketing Internship at Latina S.A.M. in Monaco, where I designed and built the company's website on Shopware, worked on SEO initiatives, managed HubSpot CRM and marketing campaigns, supported LinkedIn content and contributed to marketing performance reporting and dashboard development on Power BI.",
+    "I am a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics. Throughout my experience, I have worked across multiple areas of the digital marketing ecosystem, including building and optimising websites, managing CRM systems, executing marketing campaigns, improving search visibility and analysing performance data to support business growth.",
+    "Most recently, I completed a five-month Marketing Internship at Latina S.A.M. in Monaco, where I designed and built the company's website on Shopware, worked on SEO initiatives, managed HubSpot CRM and marketing campaigns, supported LinkedIn content and contributed to marketing performance reporting and dashboard development.",
     "My experience has helped me develop a strong understanding of how marketing, technology and data work together to improve digital performance, strengthen customer engagement and support measurable business results.",
   ],
-  facts: ["Based in Paris, France", "Marketing & Sales Professional", "Open to opportunities"],
+  facts: ["Paris, France", "Digital Marketing & Data Analytics", "Open to opportunities"],
 };
+
 
 export const experienceIntro = {
   label: "01 / Experience",
-  heading: "What I've worked on.",
-  text: "My experience has allowed me to work across different parts of the digital marketing ecosystem — website development, SEO, CRM, marketing analytics, social media, paid marketing and business development.",
+  heading: "What I have worked on so far.",
+  text: "My experience spans website development, SEO, CRM, campaign management, data analytics, LinkedIn marketing and business development across different industries and business contexts.",
   closingQuote:
     "My experience has taught me to look at marketing as a connected system — website, search, CRM, content, campaigns and data all influence one another.",
 };
+
 
 export const latina = {
   company: "Latina S.A.M.",

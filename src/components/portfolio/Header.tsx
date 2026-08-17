@@ -58,8 +58,9 @@ export function Header() {
               rel="noopener noreferrer"
               className="rule-link nav-link text-accent"
             >
-              CV ↗
+              Download CV
             </a>
+
           </nav>
 
           <button

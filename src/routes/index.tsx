@@ -6,7 +6,8 @@ import { Skills, Education, Contact, Footer } from "@/components/portfolio/Secti
 
 const title = "Anchal Rathi | Digital Marketing & Data Analytics";
 const description =
-  "Portfolio of Anchal Rathi, a Paris-based Digital Marketing and Data Analytics professional with experience in website development, SEO, HubSpot CRM, Power BI, LinkedIn marketing, PPC and business development.";
+  "Portfolio of Anchal Rathi, a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics.";
+
 
 export const Route = createFileRoute("/")({
   component: Index,

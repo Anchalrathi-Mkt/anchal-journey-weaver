@@ -29,26 +29,27 @@
 
 
 :root {
-  /* #F5F2EC */
-  --background: oklch(0.958 0.011 84.5);
-  /* #ECE7DF */
-  --surface: oklch(0.929 0.013 84.5);
-  /* #171614 */
-  --foreground: oklch(0.196 0.004 67);
-  /* #706C66 */
-  --muted-foreground: oklch(0.512 0.008 74);
-  /* #70483E */
-  --accent: oklch(0.418 0.058 33.6);
-  --accent-foreground: oklch(0.958 0.011 84.5);
+  /* #F6F1EB */
+  --background: oklch(0.96 0.01 72.7);
+  /* #EFE7DE */
+  --surface: oklch(0.932 0.015 70.9);
   /* #1B1A18 */
-  --ink: oklch(0.216 0.004 67);
-  --ink-foreground: oklch(0.958 0.011 84.5);
-  /* warm taupe block — #C9B4A4 */
-  --clay: oklch(0.786 0.028 55);
-  --clay-foreground: oklch(0.196 0.004 67);
-  --border: oklch(0.196 0.004 67 / 0.15);
-  --border-strong: oklch(0.196 0.004 67 / 0.35);
+  --foreground: oklch(0.218 0.004 84.6);
+  /* #6E675F */
+  --muted-foreground: oklch(0.518 0.015 71.2);
+  /* dark accent #3F342D */
+  --accent: oklch(0.335 0.02 54.3);
+  --accent-foreground: oklch(0.96 0.01 72.7);
+  /* #1B1A18 */
+  --ink: oklch(0.218 0.004 84.6);
+  --ink-foreground: oklch(0.96 0.01 72.7);
+  /* accent / button tone #B8A18C */
+  --clay: oklch(0.724 0.04 64.5);
+  --clay-foreground: oklch(0.218 0.004 84.6);
+  --border: oklch(0.218 0.004 84.6 / 0.12);
+  --border-strong: oklch(0.218 0.004 84.6 / 0.3);
 }
+
 
 
 @layer base {

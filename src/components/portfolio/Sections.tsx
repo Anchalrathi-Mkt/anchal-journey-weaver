@@ -8,10 +8,14 @@ export function Skills() {
         <Reveal>
           <Label>02 / Skills</Label>
           <h2 className="display mt-6 max-w-[16ch] text-[clamp(2.4rem,5.4vw,3.8rem)]">
-            The <span className="script-em">tools</span> and disciplines behind my work.
+            Skills &amp; <span className="script-em">Expertise</span>
           </h2>
-
+          <p className="mt-8 max-w-[58ch] text-[17px] leading-[1.85] text-muted-foreground">
+            My work combines marketing strategy, execution and analysis across multiple digital
+            functions.
+          </p>
         </Reveal>
+
 
         <div className="mt-20 grid gap-14 md:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group, i) => (
@@ -46,9 +50,10 @@ export function Education() {
         <Reveal>
           <Label>{education.label}</Label>
           <h2 className="display mt-6 max-w-[16ch] text-[clamp(2.4rem,5.4vw,3.8rem)]">
-            {education.heading}
+            Education
           </h2>
         </Reveal>
+
 
         <Reveal delay={80}>
           <div className="mt-20 border-t border-border pt-10">
@@ -128,16 +133,26 @@ export function Contact() {
           <Reveal delay={80}>
             <div className="max-w-[54ch] space-y-5 text-[17px] leading-[1.8] opacity-75">
               <p>
-                I'm interested in opportunities where I can combine digital marketing, technology
-                and data to create measurable business impact.
+                I am interested in opportunities where I can combine digital marketing, technology
+                and data to contribute to meaningful business growth.
               </p>
-              <p>Currently based in Paris and open to opportunities in France and Europe.</p>
+              <p>Paris, France</p>
             </div>
-            <a href={`mailto:${profile.email}`} className="btn-clay mt-12">
-              Send me an email
-            </a>
-
+            <div className="mt-12 flex flex-wrap items-center gap-6">
+              <a href={`mailto:${profile.email}`} className="btn-clay">
+                Email Me
+              </a>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link rule-link !text-ink-foreground opacity-80"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
           </Reveal>
+
 
           <Reveal delay={140}>
             <div className="space-y-8 md:pt-2">
@@ -174,14 +189,18 @@ export function Footer() {
   return (
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-4 border-t border-ink-foreground/15 px-6 py-8 md:px-10">
-        <span className="label-xs !text-ink-foreground opacity-60">© 2026 Anchal Rathi</span>
-        <div className="flex items-center gap-8">
+        <div className="flex flex-wrap items-center gap-6">
+          <span className="font-serif text-[17px] uppercase tracking-[0.24em]">Anchal Rathi</span>
           <span className="label-xs !text-ink-foreground opacity-60">Paris, France</span>
+        </div>
+        <div className="flex items-center gap-8">
+          <span className="label-xs !text-ink-foreground opacity-60">© 2026 Anchal Rathi</span>
           <a href="#introduction" className="label-xs rule-link !text-ink-foreground">
             Back to top ↑
           </a>
         </div>
       </div>
+
     </footer>
   );
 }
