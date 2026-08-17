@@ -8,10 +8,14 @@ export function Skills() {
         <Reveal>
           <Label>02 / Skills</Label>
           <h2 className="display mt-6 max-w-[16ch] text-[clamp(2.4rem,5.4vw,3.8rem)]">
-            The <span className="script-em">tools</span> and disciplines behind my work.
+            Skills &amp; <span className="script-em">Expertise</span>
           </h2>
-
+          <p className="mt-8 max-w-[58ch] text-[17px] leading-[1.85] text-muted-foreground">
+            My work combines marketing strategy, execution and analysis across multiple digital
+            functions.
+          </p>
         </Reveal>
+
 
         <div className="mt-20 grid gap-14 md:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group, i) => (
