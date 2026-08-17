@@ -13,6 +13,11 @@ import latinaPartners from "@/assets/latina-partners.jpg.asset.json";
 import latinaMobile from "@/assets/latina-mobile.jpg.asset.json";
 import seoBefore from "@/assets/seo-before.jpg.asset.json";
 import seoAfter from "@/assets/seo-after.jpg.asset.json";
+import hubspotApril from "@/assets/hubspot-april.jpg.asset.json";
+import hubspotMay from "@/assets/hubspot-may.jpg.asset.json";
+import hubspotJune from "@/assets/hubspot-june.jpg.asset.json";
+import hubspotJuly from "@/assets/hubspot-july.jpg.asset.json";
+
 
 
 function CompanyHead({
@@ -347,16 +352,28 @@ export function Experience() {
             </p>
 
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {["april", "may", "june", "july"].map((month, i) => {
-                const src = `/images/hubspot-${month}.jpg`;
-                const alt = `HubSpot campaign performance — ${month.charAt(0).toUpperCase()}${month.slice(1)}`;
+              {([
+                ["April", hubspotApril.url],
+                ["May", hubspotMay.url],
+                ["June", hubspotJune.url],
+                ["July", hubspotJuly.url],
+              ] as const).map(([month, src], i) => {
+                const alt = `HubSpot campaign performance — ${month} 2026`;
                 return (
                   <Reveal key={src} delay={i * 60}>
-                    <Media src={src} alt={alt} caption={alt} ratio="4 / 3" onOpen={() => open(src, alt)} />
+                    <Media
+                      src={src}
+                      alt={alt}
+                      caption={`${month} — emails sent and open rate`}
+                      ratio="16 / 10"
+                      browser
+                      onOpen={() => open(src, alt)}
+                    />
                   </Reveal>
                 );
               })}
             </div>
+
           </WorkArea>
 
           {/* Work area 04 — Power BI */}
