@@ -1,24 +1,77 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/portfolio/Header";
+import { Introduction } from "@/components/portfolio/Introduction";
+import { Experience } from "@/components/portfolio/Experience";
+import { Skills, Education, Contact, Footer } from "@/components/portfolio/Sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Anchal Rathi | Digital Marketing & Data Analytics";
+const description =
+  "Portfolio of Anchal Rathi, a Paris-based Digital Marketing and Data Analytics professional with experience in website development, SEO, HubSpot CRM, Power BI, LinkedIn marketing, PPC and business development.";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: "Anchal Rathi — Digital Marketing & Data Analytics" },
+      {
+        property: "og:description",
+        content:
+          "Explore my experience across website development, SEO, CRM, HubSpot, marketing analytics, Power BI, LinkedIn marketing and business growth.",
+      },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "https://anchal-rathi.com" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Anchal Rathi — Digital Marketing & Data Analytics" },
+      {
+        name: "twitter:description",
+        content:
+          "Explore my experience across website development, SEO, CRM, HubSpot, marketing analytics, Power BI, LinkedIn marketing and business growth.",
+      },
+    ],
+    links: [{ rel: "canonical", href: "https://anchal-rathi.com" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Anchal Rathi",
+          jobTitle: "Digital Marketing & Data Analytics Professional",
+          url: "https://anchal-rathi.com",
+          email: "mailto:anchal.rathi@grenoble-em.com",
+          address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
+          alumniOf: { "@type": "CollegeOrUniversity", name: "Grenoble École de Management" },
+          sameAs: ["https://www.linkedin.com/in/anchal-rathi-680802141"],
+          knowsAbout: [
+            "Digital Marketing",
+            "SEO",
+            "HubSpot CRM",
+            "Power BI",
+            "Marketing Analytics",
+            "Website Development",
+            "PPC",
+            "Business Development",
+          ],
+        }),
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Header />
+      <main>
+        <Introduction />
+        <Experience />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
