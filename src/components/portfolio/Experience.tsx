@@ -250,26 +250,29 @@ export function Experience() {
               </p>
             </div>
 
-            <div className="mt-14 grid items-center gap-10 md:grid-cols-[3fr_2fr]">
+            <div className="mt-14 grid items-start gap-10 md:grid-cols-2">
               <Reveal>
                 <Media
-                  src="/images/seo-performance.jpg"
-                  alt="SEO performance and search visibility tracking"
-                  caption="SEO performance and search visibility tracking"
+                  src={seoBefore.url}
+                  alt="Semrush domain overview before optimisation showing 14% AI visibility"
+                  caption="Before — 14% visibility, 16 organic sessions"
                   ratio="16 / 10"
-                  onOpen={() => open("/images/seo-performance.jpg", "SEO performance tracking")}
+                  browser
+                  onOpen={() => open(seoBefore.url, "Semrush overview — before")}
                 />
               </Reveal>
               <Reveal delay={80}>
                 <Media
-                  src="/images/seo-keyword-work.jpg"
-                  alt="Keyword research and optimisation work"
-                  caption="Keyword research and optimisation work"
-                  ratio="4 / 3"
-                  onOpen={() => open("/images/seo-keyword-work.jpg", "Keyword research work")}
+                  src={seoAfter.url}
+                  alt="Semrush domain overview after optimisation showing 56% AI visibility"
+                  caption="After — 56% visibility, 16.2K organic traffic"
+                  ratio="16 / 10"
+                  browser
+                  onOpen={() => open(seoAfter.url, "Semrush overview — after")}
                 />
               </Reveal>
             </div>
+
           </WorkArea>
 
           {/* Work area 03 — HubSpot */}
