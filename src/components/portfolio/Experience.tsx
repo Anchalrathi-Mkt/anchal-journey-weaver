@@ -7,7 +7,7 @@ import {
 } from "@/data/portfolio";
 import { Reveal, Label, Rule, Media, Lightbox, ListColumns } from "./primitives";
 import latinaHome from "@/assets/latina-home.jpg.asset.json";
-import latinaAbout from "@/assets/latina-about.jpg.asset.json";
+import latinaAbout from "@/assets/latina-about.png.asset.json";
 import latinaProducts from "@/assets/latina-products.jpg.asset.json";
 import latinaPartners from "@/assets/latina-partners.jpg.asset.json";
 import latinaMobile from "@/assets/latina-mobile.jpg.asset.json";
@@ -171,9 +171,9 @@ export function Experience() {
                 <Reveal>
                   <Media
                     src={latinaAbout.url}
-                    alt="Latina S.A.M. website About Us section"
+                    alt="Latina S.A.M. website Mission & Vision section"
                     browser
-                    onOpen={() => open(latinaAbout.url, "Latina S.A.M. — About / Our Story")}
+                    onOpen={() => open(latinaAbout.url, "Latina S.A.M. — Mission & Vision")}
                   />
                 </Reveal>
                 <Reveal delay={80}>
