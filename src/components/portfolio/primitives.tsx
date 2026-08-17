@@ -76,7 +76,7 @@ export function Media({
   onOpen,
   priority = false,
 }: MediaProps) {
-  const [failed, setFailed] = useState(false);
+  const { failed, imgRef, onError } = useImageFallback();
 
   const inner = (
     <div className="relative h-full w-full overflow-hidden bg-surface">
@@ -87,16 +87,18 @@ export function Media({
         </div>
       ) : (
         <img
+          ref={imgRef}
           src={src}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
-          onError={() => setFailed(true)}
+          onError={onError}
           className="h-full w-full object-cover"
         />
       )}
     </div>
   );
+
 
   const body = (
     <div className={`zoom-media overflow-hidden rounded-[4px] border border-border ${className}`}>
