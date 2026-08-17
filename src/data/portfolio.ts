@@ -185,12 +185,14 @@ export const ssBeverages = {
   role: "Digital Marketing Intern",
   dates: "January 2024 — June 2024",
   opening:
-    "At S.S. Beverages, I worked across SEO and paid digital marketing, developing experience in both organic search optimisation and performance marketing.",
+    "As a Digital Marketing Intern, I worked on SEO, paid advertising, keyword research and digital campaign management. I developed on-page and off-page SEO strategies, conducted technical SEO audits, optimised website content and built quality backlinks, helping increase organic traffic by 40% and improve overall search visibility.",
+  paidText:
+    "I also supported and managed Google Ads, Facebook Ads and PPC campaigns, focusing on audience targeting, campaign optimisation and traffic growth. These efforts contributed to an additional 15% increase in website traffic and strengthened my practical experience in performance marketing and search engine optimisation.",
   organic: [
     "On-page SEO",
     "Off-page SEO",
     "Keyword research",
-    "Technical SEO",
+    "Technical SEO audits",
     "Content optimisation",
     "Backlink building",
     "Search visibility optimisation",
@@ -200,6 +202,7 @@ export const ssBeverages = {
     "PPC",
     "Google Ads",
     "Facebook Ads",
+    "Audience targeting",
     "Campaign monitoring",
     "Traffic generation",
     "Campaign optimisation",
