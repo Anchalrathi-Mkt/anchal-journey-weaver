@@ -23,7 +23,7 @@ function CompanyHead({
   opening: string;
 }) {
   return (
-    <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-16">
+    <div className="grid min-w-0 grid-cols-1 gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-16">
       <Reveal>
         <Label>{index}</Label>
         <h3 className="display mt-4 text-[clamp(2rem,4vw,2.9rem)]">{company}</h3>
@@ -51,15 +51,15 @@ function WorkArea({
 }) {
   return (
     <div className="mt-24 border-t border-border pt-12 md:mt-32 md:pt-16">
-      <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-16">
+      <div className="grid min-w-0 grid-cols-1 gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-16">
         <Reveal>
           <Label>{label}</Label>
         </Reveal>
-        <div>
+        <div className="min-w-0">
           <Reveal>
             <h4 className="display max-w-[20ch] text-[clamp(1.7rem,3.2vw,2.4rem)]">{heading}</h4>
           </Reveal>
-          <div className="mt-8">{children}</div>
+          <div className="mt-8 min-w-0">{children}</div>
         </div>
       </div>
     </div>
@@ -334,7 +334,7 @@ export function Experience() {
               periods and better understand which offers generated stronger audience interest.
             </p>
 
-            <div className="no-scrollbar mt-12 -mx-6 flex snap-x gap-6 overflow-x-auto px-6 md:mx-0 md:px-0">
+            <div className="no-scrollbar mt-12 -mx-6 flex w-[calc(100%+3rem)] snap-x gap-6 overflow-x-auto px-6 md:mx-0 md:w-full md:px-0">
               {["april", "may", "june", "july"].map((month) => {
                 const src = `/images/hubspot-${month}.jpg`;
                 const alt = `HubSpot campaign performance — ${month.charAt(0).toUpperCase()}${month.slice(1)}`;
