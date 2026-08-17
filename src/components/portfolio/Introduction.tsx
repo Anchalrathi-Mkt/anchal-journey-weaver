@@ -1,4 +1,5 @@
-import { intro, profile } from "@/data/portfolio";
+import { profile } from "@/data/portfolio";
+import { useI18n } from "@/i18n";
 import { Reveal, useImageFallback } from "./primitives";
 
 function Portrait() {
@@ -36,6 +37,9 @@ function Portrait() {
 }
 
 export function Introduction() {
+  const { t } = useI18n();
+  const intro = t.intro;
+
   return (
     <section id="introduction" className="pt-[116px]">
       <div className="mx-auto max-w-[1280px] px-6 pb-24 pt-16 md:px-10 md:pb-36 md:pt-24">
@@ -47,8 +51,8 @@ export function Introduction() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="display mt-8 text-[clamp(2.5rem,5.6vw,4.4rem)]">
-                I work at the <span className="script-em">intersection</span> of marketing,
-                technology and data.
+                {intro.headlinePre} <span className="script-em">{intro.headlineEm}</span>{" "}
+                {intro.headlinePost}
               </h1>
             </Reveal>
 
@@ -75,7 +79,7 @@ export function Introduction() {
             <Reveal delay={420}>
               <div className="mt-10 flex flex-wrap items-center gap-6">
                 <a href="#experience" className="btn-ink">
-                  View Experience
+                  {intro.viewExperience}
                 </a>
                 <a
                   href={profile.linkedin}

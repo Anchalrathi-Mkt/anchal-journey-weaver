@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { nav, profile } from "@/data/portfolio";
+import { profile } from "@/data/portfolio";
+import { useI18n } from "@/i18n";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { t } = useI18n();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -24,9 +27,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-40">
       {/* Announcement bar */}
       <div className="bg-ink py-2.5 text-center text-ink-foreground">
-        <p className="nav-link opacity-90">
-          Marketing · Technology · Data — Currently open to opportunities
-        </p>
+        <p className="nav-link opacity-90">{t.ui.announcement}</p>
       </div>
 
       <div
@@ -43,7 +44,7 @@ export function Header() {
           </a>
 
           <nav aria-label="Primary" className="hidden items-center gap-9 lg:flex">
-            {nav.map((item) => (
+            {t.nav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -58,20 +59,23 @@ export function Header() {
               rel="noopener noreferrer"
               className="rule-link nav-link text-accent"
             >
-              Download CV
+              {t.ui.downloadCV}
             </a>
-
+            <span aria-hidden className="h-4 w-px bg-border-strong" />
+            <LanguageSwitcher />
           </nav>
 
-          <button
-            type="button"
-            className="lg:hidden"
-            aria-label="Open menu"
-            aria-expanded={open}
-            onClick={() => setOpen(true)}
-          >
-            <Menu className="h-5 w-5" strokeWidth={1.25} />
-          </button>
+          <div className="flex items-center gap-3 lg:hidden">
+            <LanguageSwitcher />
+            <button
+              type="button"
+              aria-label={t.ui.openMenu}
+              aria-expanded={open}
+              onClick={() => setOpen(true)}
+            >
+              <Menu className="h-5 w-5" strokeWidth={1.25} />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -81,12 +85,12 @@ export function Header() {
             <span className="font-serif text-[18px] uppercase tracking-[0.24em]">
               {profile.name}
             </span>
-            <button type="button" aria-label="Close menu" onClick={() => setOpen(false)}>
+            <button type="button" aria-label={t.ui.closeMenu} onClick={() => setOpen(false)}>
               <X className="h-5 w-5" strokeWidth={1.25} />
             </button>
           </div>
           <nav aria-label="Mobile" className="mt-16 flex flex-col">
-            {nav.map((item) => (
+            {t.nav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -102,8 +106,11 @@ export function Header() {
               rel="noopener noreferrer"
               className="btn-clay mt-10 self-start"
             >
-              Download CV
+              {t.ui.downloadCV}
             </a>
+            <div className="mt-10">
+              <LanguageSwitcher />
+            </div>
           </nav>
         </div>
       )}
