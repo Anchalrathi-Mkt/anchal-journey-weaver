@@ -13,6 +13,11 @@ import latinaPartners from "@/assets/latina-partners.jpg.asset.json";
 import latinaMobile from "@/assets/latina-mobile.jpg.asset.json";
 import seoBefore from "@/assets/seo-before.jpg.asset.json";
 import seoAfter from "@/assets/seo-after.jpg.asset.json";
+import hubspotApril from "@/assets/hubspot-april.jpg.asset.json";
+import hubspotMay from "@/assets/hubspot-may.jpg.asset.json";
+import hubspotJune from "@/assets/hubspot-june.jpg.asset.json";
+import hubspotJuly from "@/assets/hubspot-july.jpg.asset.json";
+
 
 
 function CompanyHead({
