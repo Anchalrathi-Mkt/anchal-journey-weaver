@@ -17,6 +17,8 @@ import hubspotApril from "@/assets/hubspot-april.jpg.asset.json";
 import hubspotMay from "@/assets/hubspot-may.jpg.asset.json";
 import hubspotJune from "@/assets/hubspot-june.jpg.asset.json";
 import hubspotJuly from "@/assets/hubspot-july.jpg.asset.json";
+import powerbiDashboard from "@/assets/powerbi-dashboard.jpg.asset.json";
+
 
 
 
@@ -418,15 +420,19 @@ export function Experience() {
             </Reveal>
           </WorkArea>
 
-          <Reveal className="mt-14">
-            <Media
-              src="/images/powerbi-dashboard.jpg"
-              alt="Marketing performance dashboard built in Power BI"
-              caption="Marketing performance dashboard — Power BI"
-              ratio="16 / 9"
-              onOpen={() => open("/images/powerbi-dashboard.jpg", "Power BI marketing dashboard")}
-            />
-          </Reveal>
+            <div className="mt-14">
+              <Reveal>
+                <Media
+                  src={powerbiDashboard.url}
+                  alt="HubSpot Marketing Performance Dashboard in Power BI — April to July 2026 overview"
+                  caption="Marketing performance dashboard — Power BI (April – July 2026)"
+                  ratio="16 / 9"
+                  browser
+                  onOpen={() => open(powerbiDashboard.url, "Power BI — HubSpot Marketing Performance Dashboard")}
+                />
+              </Reveal>
+            </div>
+
 
           {/* Work area 05 — LinkedIn */}
           <WorkArea label="LinkedIn / B2B Content" heading="Developing the company's LinkedIn presence">
