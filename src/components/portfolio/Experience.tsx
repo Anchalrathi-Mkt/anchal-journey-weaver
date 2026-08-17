@@ -96,7 +96,7 @@ export function Experience() {
         {/* ---------------- LATINA ---------------- */}
         <div className="mt-24 md:mt-36">
           <CompanyHead
-            index={ui.experienceIndex[0]}
+            index={ui.experienceIndex[0] ?? "01"}
             company={latina.company}
             role={latina.role}
             location={latina.location}
@@ -330,7 +330,7 @@ export function Experience() {
             <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
               {[hubspotApril.url, hubspotMay.url, hubspotJune.url, hubspotJuly.url].map(
                 (src, i) => {
-                  const month = ui.hubspot.months[i];
+                  const month = ui.hubspot.months[i] ?? "";
                   const alt = `HubSpot campaign performance — ${month} 2026`;
                   return (
                     <Reveal key={src} delay={i * 60}>
@@ -453,7 +453,7 @@ export function Experience() {
         {/* ---------------- FIRSTMERIDIAN ---------------- */}
         <div className="mt-32 border-t border-border pt-20 md:mt-44">
           <CompanyHead
-            index={ui.experienceIndex[1]}
+            index={ui.experienceIndex[1] ?? "02"}
             company={firstMeridian.company}
             role={firstMeridian.role}
             location={firstMeridian.location}
@@ -493,7 +493,7 @@ export function Experience() {
         {/* ---------------- S.S. BEVERAGES ---------------- */}
         <div className="mt-32 border-t border-border pt-20 md:mt-44">
           <CompanyHead
-            index={ui.experienceIndex[2]}
+            index={ui.experienceIndex[2] ?? "03"}
             company={ssBeverages.company}
             role={ssBeverages.role}
             location={ssBeverages.location}
