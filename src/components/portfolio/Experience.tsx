@@ -474,8 +474,8 @@ export function Experience() {
                 },
                 {
                   src: linkedinCampari.url,
-                  alt: "Latina S.A.M. LinkedIn post featuring Campari",
-                  caption: "Video content — Campari, Monaco",
+                  alt: "Latina S.A.M. LinkedIn post — Where Luxury Begins",
+                  caption: "Brand storytelling — Where Luxury Begins, Monaco",
                 },
               ].map((item, i) => (
                 <Reveal key={item.src} delay={i * 60}>
