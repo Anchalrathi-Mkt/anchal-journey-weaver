@@ -346,17 +346,16 @@ export function Experience() {
               periods and better understand which offers generated stronger audience interest.
             </p>
 
-            <div className="no-scrollbar mt-12 -mx-6 flex w-[calc(100%+3rem)] snap-x gap-6 overflow-x-auto px-6 md:mx-0 md:w-full md:px-0">
-              {["april", "may", "june", "july"].map((month) => {
+            <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {["april", "may", "june", "july"].map((month, i) => {
                 const src = `/images/hubspot-${month}.jpg`;
                 const alt = `HubSpot campaign performance — ${month.charAt(0).toUpperCase()}${month.slice(1)}`;
                 return (
-                  <div key={src} className="w-[78vw] shrink-0 snap-start md:w-[calc(50%-12px)]">
-                    <Media src={src} alt={alt} caption={alt} onOpen={() => open(src, alt)} />
-                  </div>
+                  <Reveal key={src} delay={i * 60}>
+                    <Media src={src} alt={alt} caption={alt} ratio="4 / 3" onOpen={() => open(src, alt)} />
+                  </Reveal>
                 );
               })}
-
             </div>
           </WorkArea>
 
