@@ -1,89 +1,95 @@
 import { intro, profile } from "@/data/portfolio";
-import { Reveal, Label, useImageFallback } from "./primitives";
+import { Reveal, useImageFallback } from "./primitives";
 
 export function Introduction() {
   const { failed, imgRef, onError } = useImageFallback();
 
-
   return (
-    <section id="introduction" className="mx-auto max-w-[1280px] px-6 pt-36 pb-24 md:px-10 md:pt-48 md:pb-36">
-      <div className="grid gap-14 lg:grid-cols-[55fr_45fr] lg:gap-20">
-        <div>
+    <section id="introduction" className="pt-[116px]">
+      {/* Editorial statement band */}
+      <div className="relative isolate overflow-hidden bg-ink">
+        {!failed && (
+          <img
+            ref={imgRef}
+            src={profile.portrait}
+            alt=""
+            aria-hidden="true"
+            onError={onError}
+            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35"
+          />
+        )}
+        <div className="mx-auto flex min-h-[68vh] max-w-[1280px] flex-col items-center justify-center px-6 py-24 text-center md:px-10 md:py-32">
           <Reveal>
-            <Label>{intro.label}</Label>
+            <p className="nav-link text-ink-foreground/70">The mission statement</p>
           </Reveal>
-
-          <Reveal delay={80}>
-            <h1 className="mt-8">
-              <span className="display block text-[clamp(3.2rem,9vw,5.6rem)]">
-                {intro.headline}
+          <Reveal delay={100}>
+            <h1 className="mt-8 text-ink-foreground">
+              <span className="display block text-[clamp(2.4rem,6.6vw,4.6rem)]">
+                I work at the <span className="script-em">intersection</span> of
               </span>
-              <span className="mt-5 block max-w-[19ch] text-[clamp(1.05rem,2.4vw,1.6rem)] font-light leading-[1.35] tracking-tight text-muted-foreground">
-                {intro.subline}
+              <span className="display mt-2 block text-[clamp(2.4rem,6.6vw,4.6rem)]">
+                marketing, <span className="script-em">technology</span> &amp; data
               </span>
             </h1>
           </Reveal>
-
-          <div className="mt-12 max-w-[54ch] space-y-6">
-            {intro.paragraphs.map((p, i) => (
-              <Reveal key={i} delay={120 + i * 60}>
-                <p className="text-[17px] leading-[1.75] text-muted-foreground">{p}</p>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={280}>
-            <ul className="mt-14 flex flex-wrap gap-x-10 gap-y-3 border-t border-border pt-6">
-              {intro.facts.map((f) => (
-                <li key={f} className="label-xs">
-                  {f}
-                </li>
-              ))}
-            </ul>
+          <Reveal delay={200}>
+            <p className="mt-8 max-w-[46ch] text-[15px] leading-[1.85] text-ink-foreground/75">
+              {intro.subline}
+            </p>
           </Reveal>
-
-          <Reveal delay={340}>
-            <div className="mt-10 flex flex-wrap items-center gap-8">
-              <a href="#experience" className="group text-[14px] text-foreground">
-                <span className="rule-link">View Experience</span>{" "}
-                <span className="inline-block transition-transform duration-500 group-hover:translate-y-[3px]">
-                  ↓
-                </span>
+          <Reveal delay={280}>
+            <div className="mt-11 flex flex-wrap items-center justify-center gap-4">
+              <a href="#experience" className="btn-clay">
+                View Experience
               </a>
               <a
                 href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group text-[14px] text-accent"
+                className="nav-link rule-link text-ink-foreground/80"
               >
-                <span className="rule-link">LinkedIn</span> <span className="arrow-shift">↗</span>
+                LinkedIn ↗
               </a>
             </div>
           </Reveal>
         </div>
+      </div>
 
-        <Reveal delay={160} className="lg:pt-4">
-          <div className="zoom-media overflow-hidden rounded-[6px] border border-border bg-surface">
-            <div style={{ aspectRatio: "4 / 5" }}>
-              {failed ? (
-                <div className="placeholder-fill flex h-full w-full items-center justify-center">
-                  <span className="font-serif text-[clamp(4rem,10vw,7rem)] font-light tracking-[0.08em] text-muted-foreground">
-                    AR
-                  </span>
-                </div>
-              ) : (
-                <img
-                  ref={imgRef}
-                  src={profile.portrait}
-                  alt="Portrait of Anchal Rathi"
-                  onError={onError}
-
-                  className="h-full w-full object-cover"
-                />
-              )}
+      {/* Overlapping editorial intro */}
+      <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-32">
+        <div className="grid items-start gap-14 lg:grid-cols-[42fr_58fr] lg:gap-24">
+          <Reveal>
+            <div className="relative">
+              <div className="absolute -left-4 -top-4 hidden h-full w-full bg-clay md:block" />
+              <div className="relative bg-surface px-8 py-12 md:px-12 md:py-16">
+                <p className="nav-link">{intro.label}</p>
+                <p className="display mt-8 text-[clamp(2rem,4.4vw,3.1rem)]">
+                  So what makes me <span className="script-em">different?</span>
+                </p>
+                <ul className="mt-10 space-y-3 border-t border-border pt-6">
+                  {intro.facts.map((f) => (
+                    <li key={f} className="label-xs">
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
+          </Reveal>
+
+          <div className="min-w-0 space-y-7 lg:pt-6">
+            {intro.paragraphs.map((p, i) => (
+              <Reveal key={i} delay={100 + i * 70}>
+                <p className="max-w-[62ch] text-[17px] leading-[1.85] text-muted-foreground">{p}</p>
+              </Reveal>
+            ))}
+            <Reveal delay={340}>
+              <a href="#contact" className="btn-ink mt-4">
+                Get in touch
+              </a>
+            </Reveal>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );
