@@ -153,31 +153,30 @@ export const firstMeridian = {
   role: "Management Executive",
   dates: "July 2024 — July 2025",
   opening:
-    "My role at FirstMeridian focused on lead generation, client acquisition, LinkedIn outreach, CRM management and business development.",
+    "As a Management Executive, I worked across lead generation, client acquisition, LinkedIn outreach, CRM management and business development. I identified and engaged potential clients, managed follow-ups, and maintained accurate CRM data throughout the sales cycle.",
   leadGenText:
-    "I used targeted LinkedIn outreach to identify and engage potential business clients, supporting the lead generation and conversion process.",
+    "Through targeted LinkedIn outreach, I acquired 40 clients and converted 16, contributing to a 35% increase in revenue. I also helped improve lead quality by 50% and profit margins by 30% through better targeting and engagement strategies.",
   responsibilities: [
-    "Prospect research",
+    "Lead generation",
+    "Client acquisition",
     "LinkedIn outreach",
-    "Lead identification",
-    "Lead qualification",
+    "CRM management",
+    "Business development",
+    "Prospect research",
     "Client communication",
-    "Follow-up",
-    "CRM tracking",
-    "Business development support",
-    "Relationship building",
+    "Follow-up management",
+    "CRM data accuracy",
+    "B2B relationship building",
   ],
   metrics: [
     { value: "40", label: "Clients acquired through LinkedIn outreach" },
     { value: "16", label: "Clients converted" },
-    { value: "+35%", label: "Revenue increase" },
+    { value: "+35%", label: "Increase in revenue" },
     { value: "+50%", label: "Improvement in lead quality" },
     { value: "+30%", label: "Improvement in profit margins" },
   ],
   closing:
-    "The role strengthened my understanding of how targeted outreach, structured follow-up and better lead qualification can contribute directly to commercial performance.",
-  bizDev:
-    "Supported lead generation and business development initiatives involving brands such as Estée Lauder, Amazon and Mokobara.",
+    "I collaborated on business development initiatives involving brands such as Estée Lauder, Amazon and Mokobara, strengthening my experience in B2B sales, client relationships and digital prospecting.",
 };
 
 export const ssBeverages = {
