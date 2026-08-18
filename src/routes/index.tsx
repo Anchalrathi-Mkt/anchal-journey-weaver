@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/portfolio/Header";
+import { HeroSlider } from "@/components/portfolio/HeroSlider";
 import { Introduction } from "@/components/portfolio/Introduction";
 import { Experience } from "@/components/portfolio/Experience";
 import { Skills, Education, Contact, Footer } from "@/components/portfolio/Sections";
@@ -73,6 +74,7 @@ function Index() {
     <I18nProvider>
       <Header />
       <main>
+        <HeroSlider />
         <Introduction />
         <Positioning />
         <Experience />
