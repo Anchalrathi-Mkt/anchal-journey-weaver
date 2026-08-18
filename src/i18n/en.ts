@@ -271,9 +271,9 @@ export const en = {
     to: "2027",
     location: "France",
     description:
-      "My MSc combines digital marketing strategy with the analytical and technical skills required to understand modern customer journeys and marketing performance.",
+      "My professional experience gave me hands-on exposure to digital marketing. My MSc at Grenoble École de Management is helping me deepen the analytical and strategic side of that experience.",
     supporting:
-      "I am continuing to develop my skills in digital marketing, SEO, Power BI, SQL, Python and data-driven decision-making.",
+      "Through the programme, I continue to develop my capabilities across digital marketing, data analytics, SEO, Power BI, SQL and Python.",
     additional: "Additional",
     languagesLabel: "Languages",
     certificationsLabel: "Certifications",
@@ -546,11 +546,11 @@ export const en = {
     experienceIndex: ["Experience 01", "Experience 02", "Experience 03"],
 
     website: {
-      label: "Website Development / Shopware",
-      heading: "Building Latina S.A.M.'s corporate website",
+      label: "01 / Digital presence",
+      heading: "Turning company information into a structured digital experience.",
       p1: "One of my main projects was designing and building the Latina S.A.M. corporate website using Shopware.",
       p2: "I worked on translating the company's business information into a clear digital structure, making it easier for visitors to understand the company, its product portfolio, services, international markets and distribution capabilities.",
-      responsibilitiesLabel: "My responsibilities included",
+      responsibilitiesLabel: "What I worked on",
       languagesPre: "Content was coordinated for multiple languages including",
       p3: "The objective was not only to create a visually professional website, but also to organise the information in a way that made sense for international B2B customers and partners.",
       structureLabel: "Website structure",
@@ -558,8 +558,8 @@ export const en = {
     },
 
     seo: {
-      label: "SEO / Organic Search",
-      heading: "Improving search visibility for Wine & Spirits Europe",
+      label: "02 / Search visibility",
+      heading: "Making the website easier to discover.",
       p1: "Alongside website development, I worked on SEO for the Wine & Spirits Europe website, focusing on improving its search visibility, keyword optimisation and organic discoverability.",
       initial: "Initial search visibility",
       final: "Final search visibility",
@@ -571,8 +571,8 @@ export const en = {
     },
 
     hubspot: {
-      label: "HubSpot CRM / Email Marketing",
-      heading: "Managing CRM and marketing campaigns",
+      label: "03 / CRM & marketing",
+      heading: "Turning CRM activity into measurable marketing.",
       p1: "I worked with HubSpot CRM to organise marketing activity, manage contacts, create campaigns and analyse how audiences interacted with offers and email communication.",
       crmManagement: "CRM Management",
       campaignManagement: "Campaign Management",
@@ -582,8 +582,8 @@ export const en = {
     },
 
     powerbi: {
-      label: "Power BI / Marketing Analytics",
-      heading: "Turning marketing data into clearer insights",
+      label: "04 / Data & decision making",
+      heading: "Making marketing performance easier to understand.",
       p1: "To make CRM and campaign performance easier to understand, I worked on marketing reporting and built a Power BI dashboard for tracking marketing and CRM activity.",
       p2: "The objective was to bring relevant KPIs into a clearer visual format so campaign activity, engagement and lead performance could be monitored more efficiently.",
       areasLabel: "Areas analysed",
@@ -593,8 +593,8 @@ export const en = {
     },
 
     linkedin: {
-      label: "LinkedIn / B2B Content",
-      heading: "Developing the company's LinkedIn presence",
+      label: "05 / B2B communication",
+      heading: "Helping communicate the company beyond its website.",
       p1: "I also managed content for Latina S.A.M.'s LinkedIn page, helping maintain a more consistent B2B presence and communicate the company's work, industry knowledge and brand story.",
       workLabel: "Work included",
       themesLabel: "Content themes",
@@ -603,9 +603,9 @@ export const en = {
     },
 
     fm: {
-      label: "Lead Generation / Business Development",
-      heading: "B2B Lead Generation",
-      responsibilitiesLabel: "Responsibilities",
+      label: "Lead generation / Business development",
+      heading: "B2B lead generation",
+      responsibilitiesLabel: "What I worked on",
     },
 
     ss: {
@@ -624,15 +624,16 @@ export const en = {
       headingA: "Skills &",
       headingB: "Expertise",
       intro:
-        "My work combines marketing strategy, execution and analysis across multiple digital functions.",
+        "My toolkit reflects the different sides of my experience — marketing, technology, sales and analytics. I have used these skills in real business environments rather than learning them only in theory.",
     },
 
     contact: {
       label: "04 / Contact",
-      headingA: "Let's",
-      headingB: "connect.",
-      p1: "I am interested in opportunities where I can combine digital marketing, technology and data to contribute to meaningful business growth.",
-      location: "Paris, France",
+      label2: "Let's connect",
+      headingA: "Looking for someone who can connect marketing,",
+      headingB: "technology and data?",
+      p1: "I am interested in opportunities where I can contribute hands-on, solve meaningful business problems and continue developing across digital marketing, CRM, growth and analytics.",
+      location: "Based in Paris and comfortable working in international and multicultural environments.",
       emailMe: "Email Me",
       emailLabel: "Email",
       linkedinLabel: "LinkedIn",
