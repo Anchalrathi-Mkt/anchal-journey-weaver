@@ -74,11 +74,16 @@ function Index() {
       <Header />
       <main>
         <Introduction />
+        <Positioning />
         <Experience />
+        <HowIWork />
+        <BeyondCV />
         <Skills />
         <Education />
+        <WhyWorkWithMe />
         <Contact />
       </main>
+
       <Footer />
     </I18nProvider>
   );
