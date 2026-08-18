@@ -15,9 +15,12 @@ export const es: Content = {
     headlineEm: "intersección",
     headlinePost: "del marketing, la tecnología y los datos.",
     paragraphs: [
-      "Soy una profesional de marketing y ventas con más de dos años de experiencia en marketing digital, SEO, PPC, CRM, desarrollo web y análisis de datos. A lo largo de mi trayectoria he trabajado en múltiples áreas del ecosistema digital: creación y optimización de sitios web, gestión de sistemas CRM, ejecución de campañas de marketing, mejora de la visibilidad en buscadores y análisis del rendimiento para impulsar el crecimiento del negocio.",
-      "Recientemente completé unas prácticas de marketing de cinco meses en Latina S.A.M. en Mónaco, donde diseñé y desarrollé el sitio web de la empresa en Shopware, trabajé en iniciativas SEO, gestioné el CRM de HubSpot y las campañas de marketing, apoyé el contenido de LinkedIn y contribuí al reporting de rendimiento y al desarrollo de cuadros de mando.",
-      "Esta experiencia me ha permitido comprender en profundidad cómo el marketing, la tecnología y los datos trabajan juntos para mejorar el rendimiento digital, reforzar la relación con los clientes y generar resultados medibles.",
+      "Soy una profesional de marketing y ventas con más de dos años de experiencia en marketing digital, SEO, PPC, CRM, desarrollo web y análisis de datos.",
+      "Mi trayectoria me ha dado la oportunidad de trabajar en distintas etapas del recorrido digital — desde la creación de sitios web y la mejora de la visibilidad en buscadores hasta la gestión de campañas de CRM, el análisis del rendimiento de marketing y el apoyo al desarrollo de negocio.",
+      "Recientemente completé unas prácticas de marketing de cinco meses en Latina S.A.M. en Mónaco, donde construí el sitio web de la empresa en Shopware, trabajé en SEO, gestioné el CRM de HubSpot y las campañas de marketing, apoyé la comunicación en LinkedIn y trabajé con datos y cuadros de mando de marketing.",
+      "Pero mi experiencia no se limita al uso de herramientas.",
+      "He trabajado en distintos entornos profesionales y culturales, incluido un entorno empresarial francófono en Mónaco, he participado activamente en reuniones de empresa, he presentado informes de marketing y he explicado a mis compañeros cuadros de mando y datos de rendimiento.",
+      "Disfruto entendiendo un problema de negocio, encontrando una forma práctica de resolverlo y usando después los datos para comprobar si la solución ha funcionado.",
     ],
     facts: ["París, Francia", "Marketing digital y análisis de datos", "Abierta a oportunidades"],
     viewExperience: "Ver experiencia",
@@ -269,9 +272,9 @@ export const es: Content = {
     to: "2027",
     location: "Francia",
     description:
-      "Mi MSc combina la estrategia de marketing digital con las competencias analíticas y técnicas necesarias para entender los recorridos de cliente actuales y el rendimiento del marketing.",
+      "Mi experiencia profesional me dio un primer contacto práctico con el marketing digital. Mi MSc en Grenoble École de Management me está ayudando a profundizar en la vertiente analítica y estratégica de esa experiencia.",
     supporting:
-      "Sigo desarrollando mis competencias en marketing digital, SEO, Power BI, SQL, Python y toma de decisiones basada en datos.",
+      "A través del programa sigo desarrollando mis competencias en marketing digital, análisis de datos, SEO, Power BI, SQL y Python.",
     additional: "Información adicional",
     languagesLabel: "Idiomas",
     certificationsLabel: "Certificaciones",
@@ -289,6 +292,252 @@ export const es: Content = {
     ],
   },
 
+  story: {
+    labels: {
+      challenge: "El reto",
+      whatIDid: "Lo que hice",
+      valueCreated: "El valor creado",
+      result: "El resultado",
+      performance: "Rendimiento",
+      impact: "Impacto en el negocio",
+      whatIWorkedOn: "En qué trabajé",
+      approach: "Mi enfoque",
+    },
+
+    positioning: {
+      label: "Más allá de las herramientas",
+      statementA: "No me limito a ejecutar tareas de marketing.",
+      statementB: "Intento entender el problema que hay detrás.",
+      p1: "Saber usar HubSpot, Power BI, Shopware o herramientas de SEO es importante, pero creo que el verdadero valor está en saber cuándo y por qué usarlas.",
+      p2: "A lo largo de mi experiencia he tenido que entender necesidades de negocio, trabajar con distintos equipos, encontrar soluciones prácticas, presentar mis hallazgos y traducir los datos de marketing en información que otras personas puedan usar realmente.",
+      p3: "Esta es la parte del marketing que más disfruto: conectar la ejecución con el valor de negocio.",
+    },
+
+    latinaIntro:
+      "Mi experiencia en Latina S.A.M. me dio la oportunidad de trabajar en varias áreas conectadas del marketing digital — desarrollo web, SEO, CRM, email marketing, analítica y contenido B2B. En lugar de trabajar en una función aislada, pude ver cómo los distintos canales digitales contribuyen al negocio en su conjunto.",
+
+    website: {
+      challenge:
+        "Latina S.A.M. opera en distribución internacional, productos, mercados, abastecimiento y alianzas empresariales. Parte fundamental de mi trabajo fue ayudar a traducir esta amplia información de negocio en una estructura web que los visitantes pudieran entender y navegar con más facilidad.",
+      valueIntro:
+        "Mi aportación ayudó a convertir información fragmentada de la empresa en una presencia digital más estructurada, en la que visitantes internacionales, posibles socios y clientes pudieran entender con más claridad:",
+      valueItems: [
+        "quién es la empresa",
+        "qué distribuye",
+        "en qué mercados opera",
+        "qué servicios ofrece",
+        "cómo pueden relacionarse con la empresa los posibles socios",
+      ],
+      takeaway:
+        "Valor creado: una comunicación digital más clara y una presencia online más estructurada.",
+    },
+
+    seo: {
+      challenge:
+        "Un buen sitio web genera un valor limitado si el público adecuado no puede encontrarlo a través de los buscadores. Para Wine & Spirits Europe, mi trabajo se centró en mejorar la visibilidad orgánica y reforzar la estructura SEO del sitio.",
+      valueCreated:
+        "El trabajo ayudó a reforzar la capacidad del sitio para aparecer en resultados de búsqueda relevantes y mejoró la base para un descubrimiento orgánico a largo plazo.",
+      takeaway:
+        "Valor creado: mayor visibilidad en buscadores y una presencia digital más optimizada para SEO.",
+    },
+
+    hubspot: {
+      challenge:
+        "Gestionar campañas no consiste solo en enviar correos. La empresa también necesita entender qué se envió, quién interactuó con ello y qué comunicación funcionó mejor.",
+      note: "No me limité a ejecutar las campañas. También analicé su rendimiento y usé el reporting para entender los patrones de interacción.",
+      valueIntro:
+        "Mi trabajo dio a la empresa mayor visibilidad sobre cómo estaba funcionando su comunicación de marketing. En lugar de mirar solo la actividad de las campañas, el reporting facilitó identificar:",
+      valueItems: [
+        "qué comunicación generó más interacción",
+        "cómo cambió la actividad de las campañas con el tiempo",
+        "qué ofertas despertaron más interés",
+        "dónde podía mejorarse la comunicación futura",
+      ],
+      takeaway: "Valor creado: mayor visibilidad de las campañas y decisiones de marketing más informadas.",
+    },
+
+    powerbi: {
+      challenge:
+        "Los datos solo tienen valor cuando las personas pueden entender qué significan. Parte de mi trabajo consistió en organizar la información de marketing de forma que el rendimiento de campañas y CRM fuera más fácil de interpretar.",
+      beyondLabel: "Más que construir un cuadro de mando",
+      beyondText:
+        "No me limité a construir y analizar informes. Participé activamente en reuniones de empresa donde presenté informes de marketing de HubSpot, expliqué el rendimiento de las campañas y guié a mis compañeros a través del cuadro de mando de Power BI y el significado de sus KPI.",
+      beyondNote:
+        "Esta experiencia reforzó mi capacidad de comunicar los datos, no solo de analizarlos.",
+      valueCreated:
+        "Los cuadros de mando y los informes ayudaron a transformar la actividad de marketing en información que el equipo podía discutir, interpretar y utilizar.",
+      takeaway:
+        "Valor creado: convertir los datos de marketing en conversaciones de negocio más claras y en apoyo a la toma de decisiones.",
+      quote:
+        "Aprendí que un cuadro de mando no tiene valor por contener datos. Tiene valor cuando alguien puede usarlo para tomar una mejor decisión.",
+    },
+
+    problemSolving: {
+      label: "Resolución de problemas",
+      heading: "Encontrar soluciones prácticas en lugar de esperar condiciones perfectas.",
+      p1: "Trabajar en desarrollo web, SEO, CRM y reporting a menudo implicaba manejar información procedente de distintas fuentes, requisitos de negocio cambiantes y diferentes perspectivas de los interesados.",
+      p2: "Aprendí a abordar estas situaciones entendiendo primero el problema de negocio real, dividiéndolo en partes más pequeñas y encontrando después una solución práctica con las herramientas y los recursos disponibles.",
+      movingLabel: "Moviéndome entre",
+      areas: [
+        "Contenido web",
+        "Implementación técnica",
+        "CRM",
+        "Datos",
+        "Comunicación de marketing",
+        "Reporting",
+      ],
+      closing:
+        "Esto me enseñó a sentirme cómoda trabajando entre disciplinas, en lugar de ver el marketing como un conjunto de tareas aisladas.",
+    },
+
+    linkedin: {
+      valueCreated:
+        "El trabajo apoyó una presencia profesional más constante más allá del sitio web corporativo y dio a la empresa otro canal para comunicar su actividad, su conocimiento del sector y su marca.",
+    },
+
+    cultures: {
+      label: "Trabajar entre culturas",
+      heading: "Aprender a adaptarme, comunicar y aportar en un nuevo entorno.",
+      p1: "Trasladarme de India a Francia y trabajar en Mónaco me dio una experiencia que va más allá de las competencias técnicas de marketing. Tuve que adaptarme a una cultura profesional, un estilo de comunicación y un entorno de trabajo distintos, sin dejar de cumplir con mis responsabilidades.",
+      p2: "Trabajé en un entorno multicultural, colaboré con personas de distintos orígenes y participé activamente en discusiones y reuniones de empresa.",
+      p3: "Esta experiencia me enseñó lo importantes que son la adaptabilidad, la observación y la comunicación al trabajar a nivel internacional.",
+      quoteA: "Los entornos distintos no me incomodan.",
+      quoteB: "Me hacen aprender más rápido.",
+    },
+
+    fm: {
+      intro:
+        "En FirstMeridian, mi trabajo se acercó más a la vertiente comercial del marketing. Trabajé en generación de leads B2B, prospección en LinkedIn, captación de clientes, seguimiento del CRM y desarrollo de negocio.",
+      challengeHeading: "Encontrar a los prospectos adecuados, no simplemente generar más leads.",
+      challengeText:
+        "La prospección B2B genera valor cuando los leads generados son relevantes y tienen una posibilidad real de convertirse en clientes.",
+      storytelling:
+        "El valor de este trabajo no fue simplemente crear una lista más larga de leads. Mejorar la segmentación y la cualificación permitió a la empresa centrar su tiempo en oportunidades más relevantes, mientras que las conversiones logradas contribuyeron directamente a los ingresos.",
+      brands:
+        "También apoyé iniciativas de generación de leads y desarrollo de negocio con marcas como Estée Lauder, Amazon y Mokobara.",
+      sequence: [
+        "Mejor segmentación",
+        "Mejores leads",
+        "Más conversiones",
+        "Resultados comerciales más sólidos",
+      ],
+    },
+
+    ss: {
+      intro:
+        "En S.S. Beverages desarrollé experiencia práctica tanto en adquisición orgánica como en adquisición digital de pago.",
+      challengeHeading:
+        "Atraer tráfico más relevante al negocio a través de buscadores y medios de pago.",
+      valueCreated:
+        "El trabajo ayudó a reforzar la adquisición digital de la empresa desde dos frentes: construir visibilidad orgánica sostenible mediante SEO, mientras se usaban campañas de pago para generar tráfico adicional al sitio web.",
+      takeaway:
+        "Valor creado: mayor visibilidad digital y más tráfico web tanto en canales orgánicos como de pago.",
+    },
+
+    howIWork: {
+      label: "Cómo trabajo",
+      heading: "De un problema de negocio a una solución práctica.",
+      steps: [
+        {
+          n: "01",
+          title: "Entender",
+          question: "¿Cuál es el problema real?",
+          text: "Empiezo por entender el objetivo de negocio en lugar de elegir una herramienta de inmediato.",
+        },
+        {
+          n: "02",
+          title: "Construir",
+          question: "¿Qué puedo crear o mejorar?",
+          text: "Eso puede significar construir un sitio web, reestructurar la actividad del CRM, mejorar el SEO, crear una campaña o desarrollar un cuadro de mando.",
+        },
+        {
+          n: "03",
+          title: "Medir",
+          question: "¿Ha funcionado realmente?",
+          text: "Utilizo datos e indicadores de rendimiento para entender el resultado.",
+        },
+        {
+          n: "04",
+          title: "Comunicar",
+          question: "¿Qué significa el resultado?",
+          text: "Creo que un análisis solo adquiere valor cuando el hallazgo se puede explicar con claridad a quienes toman las decisiones.",
+        },
+      ],
+      closing:
+        "Mi valor está en poder moverme entre la ejecución, el análisis y la comunicación.",
+    },
+
+    beyondCV: {
+      label: "Más allá del CV",
+      heading: "Las competencias que no encontrarás en una lista de programas.",
+      items: [
+        {
+          title: "Resolución creativa de problemas",
+          statement: "Busco soluciones, no solo instrucciones.",
+          text: "Trabajar en sitios web, CRM, SEO y analítica me ha enseñado a entender los problemas desde distintos ángulos y a encontrar formas prácticas de avanzar.",
+        },
+        {
+          title: "Comunicación de datos",
+          statement: "Sé analizar los números y explicar qué significan.",
+          text: "He presentado informes de HubSpot, explicado el rendimiento de campañas y guiado a mis compañeros por cuadros de mando de Power BI durante reuniones de empresa.",
+        },
+        {
+          title: "Adaptabilidad multicultural",
+          statement: "Me siento cómoda aprendiendo en entornos poco familiares.",
+          text: "Habiendo estudiado y trabajado en India y Francia y completado experiencia profesional en Mónaco, he aprendido a adaptarme a distintas culturas, equipos y estilos de comunicación.",
+        },
+        {
+          title: "Visión de negocio",
+          statement: "Pienso más allá de la tarea.",
+          text: "Ya sea trabajando en SEO, CRM, un sitio web o un cuadro de mando, intento entender cómo se conecta ese trabajo con la visibilidad, la interacción con los clientes, la eficiencia, los leads o el crecimiento del negocio.",
+        },
+      ],
+    },
+
+    why: {
+      label: "Por qué trabajar conmigo",
+      heading: "La experiencia práctica es solo una parte de lo que aporto.",
+      paragraphs: [
+        "Mi experiencia demuestra que puedo trabajar de forma práctica con SEO, CRM, HubSpot, Power BI, análisis de datos, desarrollo web, PPC y marketing digital.",
+        "Pero conocer las herramientas es solo una parte de lo que aporto a un equipo.",
+        "He construido sitios web, no solo planificarlos. He trabajado en SEO y medido el cambio en la visibilidad. He gestionado campañas de CRM y analizado su interacción. He construido cuadros de mando y luego los he presentado a mis compañeros para que la información pudiera entenderse y usarse de verdad.",
+        "También he trabajado en distintos entornos culturales, me he adaptado a nuevas formas de trabajar y he aprendido a comunicarme con personas de distintos perfiles profesionales.",
+        "Y, sobre todo, intento entender por qué hay que hacer algo antes de decidir cómo hacerlo.",
+      ],
+      reasons: [
+        {
+          n: "01",
+          title: "Sé ejecutar",
+          text: "Tengo experiencia práctica trabajando directamente con sitios web, sistemas CRM, campañas de marketing, SEO y herramientas de analítica.",
+        },
+        {
+          n: "02",
+          title: "Entiendo los datos",
+          text: "Sé hacer seguimiento del rendimiento, construir cuadros de mando y usar los datos de marketing para entender qué está funcionando.",
+        },
+        {
+          n: "03",
+          title: "Sé comunicar los resultados",
+          text: "He presentado informes de marketing y explicado los resultados de cuadros de mando en reuniones de empresa, sin dejar el análisis limitado a hojas de cálculo.",
+        },
+        {
+          n: "04",
+          title: "Me adapto",
+          text: "He estudiado y trabajado en distintos entornos culturales y profesionales y me siento cómoda ajustándome a nuevos equipos, expectativas y formas de trabajar.",
+        },
+        {
+          n: "05",
+          title: "Conecto el marketing con el negocio",
+          text: "Intento entender cómo contribuye cada tarea a un objetivo más amplio: visibilidad, interacción, leads, eficiencia, ingresos o crecimiento.",
+        },
+      ],
+      statementA: "No quiero ser la persona que solo sabe usar la herramienta.",
+      statementB:
+        "Quiero ser la persona que entiende qué problema debe resolver esa herramienta.",
+    },
+  },
+
+
   ui: {
     announcement: "Marketing · Tecnología · Datos — Actualmente abierta a oportunidades",
     downloadCV: "Descargar CV",
@@ -298,11 +547,11 @@ export const es: Content = {
     experienceIndex: ["Experiencia 01", "Experiencia 02", "Experiencia 03"],
 
     website: {
-      label: "Desarrollo web / Shopware",
-      heading: "Construir el sitio corporativo de Latina S.A.M.",
-      p1: "Uno de mis principales proyectos fue diseñar y desarrollar el sitio corporativo de Latina S.A.M. en Shopware.",
-      p2: "Traduje la información de negocio de la empresa en una estructura digital clara, facilitando que los visitantes entendieran la compañía, su cartera de productos, sus servicios, sus mercados internacionales y su capacidad de distribución.",
-      responsibilitiesLabel: "Mis responsabilidades incluían",
+      label: "01 / Presencia digital",
+      heading: "Convertir la información de la empresa en una experiencia digital estructurada.",
+      p1: "Uno de mis principales proyectos fue diseñar y construir el sitio corporativo de Latina S.A.M. usando Shopware.",
+      p2: "Trabajé en traducir la información de negocio de la empresa en una estructura digital clara, facilitando que los visitantes entendieran la compañía, su cartera de productos, sus servicios, sus mercados internacionales y su capacidad de distribución.",
+      responsibilitiesLabel: "En qué trabajé",
       languagesPre: "El contenido se coordinó en varios idiomas, entre ellos",
       p3: "El objetivo no era solo crear un sitio visualmente profesional, sino organizar la información de forma útil para clientes y socios B2B internacionales.",
       structureLabel: "Estructura del sitio",
@@ -310,8 +559,8 @@ export const es: Content = {
     },
 
     seo: {
-      label: "SEO / Búsqueda orgánica",
-      heading: "Mejorar la visibilidad de Wine & Spirits Europe",
+      label: "02 / Visibilidad en buscadores",
+      heading: "Hacer que el sitio web sea más fácil de encontrar.",
       p1: "Además del desarrollo web, trabajé en el SEO del sitio Wine & Spirits Europe, centrándome en mejorar su visibilidad en buscadores, la optimización de palabras clave y su descubrimiento orgánico.",
       initial: "Visibilidad inicial",
       final: "Visibilidad final",
@@ -324,8 +573,8 @@ export const es: Content = {
     },
 
     hubspot: {
-      label: "HubSpot CRM / Email marketing",
-      heading: "Gestionar el CRM y las campañas de marketing",
+      label: "03 / CRM y marketing",
+      heading: "Convertir la actividad del CRM en marketing medible.",
       p1: "Utilicé HubSpot CRM para organizar la actividad de marketing, gestionar contactos, crear campañas y analizar cómo interactuaban las audiencias con las ofertas y los correos.",
       crmManagement: "Gestión del CRM",
       campaignManagement: "Gestión de campañas",
@@ -335,8 +584,8 @@ export const es: Content = {
     },
 
     powerbi: {
-      label: "Power BI / Analítica de marketing",
-      heading: "Convertir los datos de marketing en información clara",
+      label: "04 / Datos y toma de decisiones",
+      heading: "Hacer que el rendimiento de marketing sea más fácil de entender.",
       p1: "Para facilitar la lectura del rendimiento de CRM y campañas, trabajé en el reporting de marketing y construí un cuadro de mando en Power BI para el seguimiento de la actividad de marketing y CRM.",
       p2: "El objetivo era presentar los KPI relevantes en un formato visual más claro para poder seguir con mayor eficacia la actividad de campañas, la interacción y el rendimiento de los leads.",
       areasLabel: "Áreas analizadas",
@@ -346,8 +595,8 @@ export const es: Content = {
     },
 
     linkedin: {
-      label: "LinkedIn / Contenido B2B",
-      heading: "Desarrollar la presencia en LinkedIn de la empresa",
+      label: "05 / Comunicación B2B",
+      heading: "Ayudar a comunicar la empresa más allá de su sitio web.",
       p1: "También gestioné el contenido de la página de LinkedIn de Latina S.A.M., ayudando a mantener una presencia B2B más constante y a comunicar el trabajo, el conocimiento del sector y la historia de la marca.",
       workLabel: "El trabajo incluyó",
       themesLabel: "Temáticas de contenido",
@@ -358,7 +607,7 @@ export const es: Content = {
     fm: {
       label: "Generación de leads / Desarrollo de negocio",
       heading: "Generación de leads B2B",
-      responsibilitiesLabel: "Responsabilidades",
+      responsibilitiesLabel: "En qué trabajé",
     },
 
     ss: {
@@ -377,15 +626,15 @@ export const es: Content = {
       headingA: "Competencias y",
       headingB: "experiencia",
       intro:
-        "Mi trabajo combina estrategia de marketing, ejecución y análisis en múltiples funciones digitales.",
+        "Mi conjunto de competencias refleja las distintas facetas de mi experiencia: marketing, tecnología, ventas y analítica. He aplicado estas competencias en entornos de negocio reales, no solo aprendido de forma teórica.",
     },
 
     contact: {
-      label: "04 / Contacto",
-      headingA: "Hablemos",
-      headingB: "y conectemos.",
-      p1: "Me interesan oportunidades donde pueda combinar marketing digital, tecnología y datos para contribuir a un crecimiento real del negocio.",
-      location: "París, Francia",
+      label: "Hablemos",
+      headingA: "¿Buscas a alguien capaz de conectar marketing,",
+      headingB: "tecnología y datos?",
+      p1: "Me interesan oportunidades donde pueda aportar de forma práctica, resolver problemas de negocio relevantes y seguir desarrollándome en marketing digital, CRM, crecimiento y analítica.",
+      location: "Radicada en París y cómoda trabajando en entornos internacionales y multiculturales.",
       emailMe: "Escríbeme",
       emailLabel: "Correo",
       linkedinLabel: "LinkedIn",
