@@ -3,6 +3,12 @@ import { Header } from "@/components/portfolio/Header";
 import { Introduction } from "@/components/portfolio/Introduction";
 import { Experience } from "@/components/portfolio/Experience";
 import { Skills, Education, Contact, Footer } from "@/components/portfolio/Sections";
+import {
+  Positioning,
+  HowIWork,
+  BeyondCV,
+  WhyWorkWithMe,
+} from "@/components/portfolio/StorySections";
 import { I18nProvider } from "@/i18n";
 
 const title = "Anchal Rathi | Digital Marketing & Data Analytics";
