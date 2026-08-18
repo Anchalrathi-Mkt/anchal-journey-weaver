@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import latinaHome from "@/assets/latina-home.jpg.asset.json";
-import latinaAbout from "@/assets/latina-about.png.asset.json";
-import latinaProducts from "@/assets/latina-products.jpg.asset.json";
-import latinaPartners from "@/assets/latina-partners.jpg.asset.json";
-import powerbiDashboard from "@/assets/powerbi-dashboard.jpg.asset.json";
+import editorialAbout from "@/assets/editorial-about.png.asset.json";
+import editorialMonaco from "@/assets/editorial-monaco.png.asset.json";
+import editorialDelhi from "@/assets/editorial-delhi.png.asset.json";
+import editorialGrenoble from "@/assets/editorial-grenoble.png.asset.json";
+import editorialData from "@/assets/editorial-data.png.asset.json";
 
 const slides = [
-  { src: latinaHome.url, alt: "Latina S.A.M. website home page" },
-  { src: latinaAbout.url, alt: "Latina S.A.M. mission and vision page" },
-  { src: latinaProducts.url, alt: "Latina S.A.M. premium product categories" },
-  { src: latinaPartners.url, alt: "Latina S.A.M. partner brands page" },
-  { src: powerbiDashboard.url, alt: "Power BI marketing analytics dashboard" },
+  { src: editorialAbout.url, alt: "About Anchal Rathi — marketing, technology and data" },
+  { src: editorialMonaco.url, alt: "Monaco — website development, SEO, CRM and analytics" },
+  { src: editorialDelhi.url, alt: "Delhi — experience in SEO, PPC and digital growth" },
+  { src: editorialGrenoble.url, alt: "Grenoble École de Management — digital marketing and data analytics in Paris" },
+  { src: editorialData.url, alt: "Data reports — campaign data turned into clear insights" },
 ];
+
 
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
