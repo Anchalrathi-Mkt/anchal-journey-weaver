@@ -628,8 +628,7 @@ export const en = {
     },
 
     contact: {
-      label: "04 / Contact",
-      label2: "Let's connect",
+      label: "Let's connect",
       headingA: "Looking for someone who can connect marketing,",
       headingB: "technology and data?",
       p1: "I am interested in opportunities where I can contribute hands-on, solve meaningful business problems and continue developing across digital marketing, CRM, growth and analytics.",
