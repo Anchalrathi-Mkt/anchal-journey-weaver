@@ -13,10 +13,14 @@ export const en = {
     headlineEm: "intersection",
     headlinePost: "of marketing, technology and data.",
     paragraphs: [
-      "I am a Marketing and Sales professional with over two years of experience in digital marketing, SEO, PPC, CRM, website development and data analytics. Throughout my experience, I have worked across multiple areas of the digital marketing ecosystem, including building and optimising websites, managing CRM systems, executing marketing campaigns, improving search visibility and analysing performance data to support business growth.",
-      "Most recently, I completed a five-month Marketing Internship at Latina S.A.M. in Monaco, where I designed and built the company's website on Shopware, worked on SEO initiatives, managed HubSpot CRM and marketing campaigns, supported LinkedIn content and contributed to marketing performance reporting and dashboard development.",
-      "My experience has helped me develop a strong understanding of how marketing, technology and data work together to improve digital performance, strengthen customer engagement and support measurable business results.",
+      "I am a Marketing and Sales professional with over two years of experience across digital marketing, SEO, PPC, CRM, website development and data analytics.",
+      "My experience has given me the opportunity to work across different stages of the digital journey — from building websites and improving search visibility to managing CRM campaigns, analysing marketing performance and supporting business development.",
+      "Most recently, I completed a five-month Marketing Internship at Latina S.A.M. in Monaco, where I built the company's website on Shopware, worked on SEO, managed HubSpot CRM and marketing campaigns, supported LinkedIn communication and worked with marketing data and dashboards.",
+      "But my experience is not limited to using tools.",
+      "I have worked in different professional and cultural environments, including a French-speaking business environment in Monaco, participated actively in company meetings, presented marketing reports and explained dashboards and performance data to colleagues.",
+      "I enjoy understanding a business problem, finding a practical way to solve it and then using data to understand whether the solution worked.",
     ],
+
     facts: ["Paris, France", "Digital Marketing & Data Analytics", "Open to opportunities"],
     viewExperience: "View Experience",
   },
