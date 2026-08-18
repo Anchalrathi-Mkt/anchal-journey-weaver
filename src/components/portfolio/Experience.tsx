@@ -76,11 +76,59 @@ function WorkArea({
   );
 }
 
+function Beat({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="mt-12 first:mt-0">
+      <Label>{label}</Label>
+      <div className="mt-5 max-w-[62ch] space-y-5 text-[17px] leading-[1.8] text-muted-foreground">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function Takeaway({ text }: { text: string }) {
+  return (
+    <Reveal>
+      <p className="mt-12 border-l border-accent pl-6 font-serif text-[clamp(1.15rem,2.2vw,1.5rem)] font-light leading-[1.5]">
+        {text}
+      </p>
+    </Reveal>
+  );
+}
+
+function Subsection({
+  label,
+  heading,
+  children,
+}: {
+  label: string;
+  heading: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="mt-24 border-t border-border pt-12 md:mt-32 md:pt-16">
+      <Reveal>
+        <Label>{label}</Label>
+        <h4 className="display mt-5 max-w-[24ch] text-[clamp(1.6rem,3vw,2.2rem)]">{heading}</h4>
+      </Reveal>
+      <div className="mt-8">{children}</div>
+    </div>
+  );
+}
+
 export function Experience() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   const open = (src: string, alt: string) => setLightbox({ src, alt });
   const { t } = useI18n();
-  const { experienceIntro, latina, firstMeridian, ssBeverages, ui } = t;
+  const { experienceIntro, latina, firstMeridian, ssBeverages, ui, story } = t;
+  const L = story.labels;
 
   return (
     <section id="experience" className="border-t border-border">
@@ -104,12 +152,22 @@ export function Experience() {
             opening={latina.opening}
           />
 
+          <Reveal>
+            <p className="mt-12 max-w-[72ch] text-[17px] leading-[1.85] text-muted-foreground md:mt-16 md:text-[18px]">
+              {story.latinaIntro}
+            </p>
+          </Reveal>
+
           {/* Work area 01 — website */}
           <WorkArea label={ui.website.label} heading={ui.website.heading}>
-            <div className="max-w-[62ch] space-y-5 text-[17px] leading-[1.8] text-muted-foreground">
+            <Beat label={L.challenge}>
+              <p>{story.website.challenge}</p>
+            </Beat>
+
+            <Beat label={L.whatIDid}>
               <p>{ui.website.p1}</p>
               <p>{ui.website.p2}</p>
-            </div>
+            </Beat>
 
             <div className="mt-12">
               <Label>{ui.website.responsibilitiesLabel}</Label>
@@ -200,16 +258,42 @@ export function Experience() {
                 </Reveal>
               </div>
             </div>
+
+            <div className="mt-16 border-t border-border pt-10">
+              <Label>{L.valueCreated}</Label>
+              <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                {story.website.valueIntro}
+              </p>
+              <ul className="mt-6 max-w-[62ch]">
+                {story.website.valueItems.map((v) => (
+                  <li
+                    key={v}
+                    className="border-b border-border py-2.5 text-[15px] text-muted-foreground"
+                  >
+                    {v}
+                  </li>
+                ))}
+              </ul>
+              <Takeaway text={story.website.takeaway} />
+            </div>
           </WorkArea>
 
           {/* Work area 02 — SEO */}
           <WorkArea label={ui.seo.label} heading={ui.seo.heading}>
-            <p className="max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              {ui.seo.p1}
-            </p>
+            <Beat label={L.challenge}>
+              <p>{story.seo.challenge}</p>
+            </Beat>
+
+            <Beat label={L.whatIDid}>
+              <p>{ui.seo.p1}</p>
+            </Beat>
+
+            <div className="mt-16">
+              <Label>{L.result}</Label>
+            </div>
 
             <Reveal>
-              <div className="mt-14 flex flex-wrap items-end gap-x-12 gap-y-8">
+              <div className="mt-8 flex flex-wrap items-end gap-x-12 gap-y-8">
                 <div>
                   <span className="display block text-[clamp(3.5rem,9vw,6rem)]">14%</span>
                   <span className="label-xs mt-2">{ui.seo.initial}</span>
@@ -260,13 +344,26 @@ export function Experience() {
                 />
               </Reveal>
             </div>
+
+            <div className="mt-16 border-t border-border pt-10">
+              <Label>{L.valueCreated}</Label>
+              <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                {story.seo.valueCreated}
+              </p>
+              <Takeaway text={story.seo.takeaway} />
+            </div>
           </WorkArea>
 
           {/* Work area 03 — HubSpot */}
           <WorkArea label={ui.hubspot.label} heading={ui.hubspot.heading}>
-            <p className="max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              {ui.hubspot.p1}
-            </p>
+            <Beat label={L.challenge}>
+              <p>{story.hubspot.challenge}</p>
+            </Beat>
+
+            <Beat label={L.whatIDid}>
+              <p>{ui.hubspot.p1}</p>
+              <p className="text-foreground">{story.hubspot.note}</p>
+            </Beat>
 
             <ol className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-4 border-y border-border py-6">
               {latina.crmFlow.map((step, i) => (
@@ -312,7 +409,11 @@ export function Experience() {
               </div>
             </div>
 
-            <div className="mt-16 space-y-10">
+            <div className="mt-16">
+              <Label>{L.performance}</Label>
+            </div>
+
+            <div className="mt-8 space-y-10">
               {latina.hubspotMetrics.map((m, i) => (
                 <Reveal key={m.value} delay={i * 60}>
                   <div className="grid items-baseline gap-2 border-t border-border pt-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-12">
@@ -347,14 +448,36 @@ export function Experience() {
                 },
               )}
             </div>
+
+            <div className="mt-16 border-t border-border pt-10">
+              <Label>{L.valueCreated}</Label>
+              <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                {story.hubspot.valueIntro}
+              </p>
+              <ul className="mt-6 max-w-[62ch]">
+                {story.hubspot.valueItems.map((v) => (
+                  <li
+                    key={v}
+                    className="border-b border-border py-2.5 text-[15px] text-muted-foreground"
+                  >
+                    {v}
+                  </li>
+                ))}
+              </ul>
+              <Takeaway text={story.hubspot.takeaway} />
+            </div>
           </WorkArea>
 
           {/* Work area 04 — Power BI */}
           <WorkArea label={ui.powerbi.label} heading={ui.powerbi.heading}>
-            <div className="max-w-[62ch] space-y-5 text-[17px] leading-[1.8] text-muted-foreground">
+            <Beat label={L.challenge}>
+              <p>{story.powerbi.challenge}</p>
+            </Beat>
+
+            <Beat label={L.whatIDid}>
               <p>{ui.powerbi.p1}</p>
               <p>{ui.powerbi.p2}</p>
-            </div>
+            </Beat>
 
             <div className="mt-12">
               <Label>{ui.powerbi.areasLabel}</Label>
@@ -372,10 +495,28 @@ export function Experience() {
               </p>
             </div>
 
+            <div className="mt-16 border-t border-border pt-10">
+              <Label>{story.powerbi.beyondLabel}</Label>
+              <p className="mt-5 max-w-[62ch] font-serif text-[clamp(1.2rem,2.4vw,1.6rem)] font-light leading-[1.6]">
+                {story.powerbi.beyondText}
+              </p>
+              <p className="mt-6 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                {story.powerbi.beyondNote}
+              </p>
+            </div>
+
+            <div className="mt-16 border-t border-border pt-10">
+              <Label>{L.valueCreated}</Label>
+              <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                {story.powerbi.valueCreated}
+              </p>
+              <Takeaway text={story.powerbi.takeaway} />
+            </div>
+
             <Reveal>
               <blockquote className="mt-16 border-l border-accent pl-8">
-                <p className="display max-w-[24ch] text-[clamp(1.6rem,3.4vw,2.4rem)]">
-                  {ui.powerbi.quote}
+                <p className="display max-w-[26ch] text-[clamp(1.6rem,3.4vw,2.4rem)]">
+                  {story.powerbi.quote}
                 </p>
               </blockquote>
             </Reveal>
@@ -395,6 +536,33 @@ export function Experience() {
               />
             </Reveal>
           </div>
+
+          {/* Problem solving */}
+          <Subsection
+            label={story.problemSolving.label}
+            heading={story.problemSolving.heading}
+          >
+            <div className="max-w-[62ch] space-y-5 text-[17px] leading-[1.8] text-muted-foreground">
+              <p>{story.problemSolving.p1}</p>
+              <p>{story.problemSolving.p2}</p>
+            </div>
+            <div className="mt-10">
+              <Label>{story.problemSolving.movingLabel}</Label>
+              <p className="mt-5 text-[17px] leading-[2]">
+                {story.problemSolving.areas.map((a, i) => (
+                  <span key={a}>
+                    <span className="text-muted-foreground">{a}</span>
+                    {i < story.problemSolving.areas.length - 1 && (
+                      <span className="mx-3 text-border-strong">/</span>
+                    )}
+                  </span>
+                ))}
+              </p>
+            </div>
+            <p className="mt-10 max-w-[62ch] font-serif text-[clamp(1.15rem,2.2vw,1.5rem)] font-light leading-[1.55]">
+              {story.problemSolving.closing}
+            </p>
+          </Subsection>
 
           {/* Work area 05 — LinkedIn */}
           <WorkArea label={ui.linkedin.label} heading={ui.linkedin.heading}>
@@ -447,7 +615,44 @@ export function Experience() {
                 </Reveal>
               ))}
             </div>
+
+            <div className="mt-16 border-t border-border pt-10">
+              <Label>{L.valueCreated}</Label>
+              <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                {story.linkedin.valueCreated}
+              </p>
+            </div>
           </WorkArea>
+
+          {/* Working across cultures */}
+          <div className="mt-24 border-t border-border pt-12 md:mt-32 md:pt-16">
+            <div className="grid min-w-0 grid-cols-1 gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-16">
+              <Reveal>
+                <Label>{story.cultures.label}</Label>
+              </Reveal>
+              <div className="min-w-0">
+                <Reveal>
+                  <h4 className="display max-w-[22ch] text-[clamp(1.7rem,3.2vw,2.4rem)]">
+                    {story.cultures.heading}
+                  </h4>
+                </Reveal>
+                <div className="mt-8 max-w-[62ch] space-y-5 text-[17px] leading-[1.85] text-muted-foreground">
+                  <p>{story.cultures.p1}</p>
+                  <p>{story.cultures.p2}</p>
+                  <p>{story.cultures.p3}</p>
+                </div>
+                <Reveal delay={80}>
+                  <blockquote className="mt-14">
+                    <p className="display max-w-[24ch] text-[clamp(1.7rem,3.6vw,2.6rem)] leading-[1.3]">
+                      {story.cultures.quoteA}
+                      <br />
+                      <span className="script-em">{story.cultures.quoteB}</span>
+                    </p>
+                  </blockquote>
+                </Reveal>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* ---------------- FIRSTMERIDIAN ---------------- */}
@@ -461,10 +666,26 @@ export function Experience() {
             opening={firstMeridian.opening}
           />
 
-          <WorkArea label={ui.fm.label} heading={ui.fm.heading}>
-            <p className="max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              {firstMeridian.leadGenText}
+          <Reveal>
+            <p className="mt-12 max-w-[72ch] text-[17px] leading-[1.85] text-muted-foreground md:mt-16 md:text-[18px]">
+              {story.fm.intro}
             </p>
+          </Reveal>
+
+          <WorkArea label={ui.fm.label} heading={ui.fm.heading}>
+            <Reveal>
+              <Label>{L.challenge}</Label>
+              <p className="display mt-5 max-w-[24ch] text-[clamp(1.5rem,2.9vw,2.1rem)]">
+                {story.fm.challengeHeading}
+              </p>
+              <p className="mt-6 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+                {story.fm.challengeText}
+              </p>
+            </Reveal>
+
+            <Beat label={L.whatIDid}>
+              <p>{firstMeridian.leadGenText}</p>
+            </Beat>
 
             <div className="mt-12">
               <Label>{ui.fm.responsibilitiesLabel}</Label>
@@ -474,6 +695,10 @@ export function Experience() {
             </div>
 
             <div className="mt-16">
+              <Label>{L.impact}</Label>
+            </div>
+
+            <div className="mt-8">
               {firstMeridian.metrics.map((m, i) => (
                 <Reveal key={m.value} delay={i * 50}>
                   <div className="grid items-baseline gap-1 border-t border-border py-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-12">
@@ -484,9 +709,30 @@ export function Experience() {
               ))}
             </div>
 
-            <p className="mt-10 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
-              {firstMeridian.closing}
+            <p className="mt-12 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+              {story.fm.storytelling}
             </p>
+            <p className="mt-6 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+              {story.fm.brands}
+            </p>
+
+            <div className="mt-16 border-t border-border pt-10">
+              <Label>{L.valueCreated}</Label>
+              <ul className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-4">
+                {story.fm.sequence.map((step, i) => (
+                  <li key={step} className="flex items-center gap-5">
+                    <span className="font-serif text-[clamp(1.1rem,2.1vw,1.45rem)] font-light">
+                      {step}
+                    </span>
+                    {i < story.fm.sequence.length - 1 && (
+                      <span aria-hidden className="text-accent">
+                        →
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </WorkArea>
         </div>
 
@@ -500,6 +746,21 @@ export function Experience() {
             dates={ssBeverages.dates}
             opening={ssBeverages.opening}
           />
+
+          <Reveal>
+            <p className="mt-12 max-w-[72ch] text-[17px] leading-[1.85] text-muted-foreground md:mt-16 md:text-[18px]">
+              {story.ss.intro}
+            </p>
+          </Reveal>
+
+          <div className="mt-16 border-t border-border pt-12">
+            <Reveal>
+              <Label>{L.challenge}</Label>
+              <p className="display mt-5 max-w-[26ch] text-[clamp(1.5rem,2.9vw,2.1rem)]">
+                {story.ss.challengeHeading}
+              </p>
+            </Reveal>
+          </div>
 
           <div className="mt-20 grid gap-14 border-t border-border pt-12 md:grid-cols-2 md:gap-20">
             <Reveal>
@@ -549,6 +810,14 @@ export function Experience() {
                 <span className="label-xs mt-2">{ui.ss.paidMetric}</span>
               </div>
             </Reveal>
+          </div>
+
+          <div className="mt-16 border-t border-border pt-10">
+            <Label>{L.valueCreated}</Label>
+            <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.8] text-muted-foreground">
+              {story.ss.valueCreated}
+            </p>
+            <Takeaway text={story.ss.takeaway} />
           </div>
         </div>
 
