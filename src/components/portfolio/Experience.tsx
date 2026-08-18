@@ -132,7 +132,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="border-t border-border">
-      <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-36">
+      <div className="mx-auto max-w-[1480px] px-6 py-24 md:px-10 md:py-36">
         <Reveal>
           <Label>{experienceIntro.label}</Label>
           <h2 className="display mt-6 text-[clamp(2.6rem,6vw,4rem)]">{experienceIntro.heading}</h2>
@@ -328,7 +328,7 @@ export function Experience() {
                   src={seoBefore.url}
                   alt="Semrush domain overview before optimisation showing 14% AI visibility"
                   caption={ui.seo.beforeCaption}
-                  ratio="16 / 10"
+                  ratio="16 / 9"
                   browser
                   onOpen={() => open(seoBefore.url, "Semrush overview — before")}
                 />
@@ -338,7 +338,7 @@ export function Experience() {
                   src={seoAfter.url}
                   alt="Semrush domain overview after optimisation showing 56% AI visibility"
                   caption={ui.seo.afterCaption}
-                  ratio="16 / 10"
+                  ratio="16 / 9"
                   browser
                   onOpen={() => open(seoAfter.url, "Semrush overview — after")}
                 />
@@ -439,7 +439,7 @@ export function Experience() {
                         src={src}
                         alt={alt}
                         caption={`${month} — ${ui.hubspot.monthCaption}`}
-                        ratio="16 / 10"
+                        ratio="16 / 9"
                         browser
                         onOpen={() => open(src, alt)}
                       />

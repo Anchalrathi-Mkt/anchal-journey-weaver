@@ -41,9 +41,9 @@ export function Introduction() {
   const intro = t.intro;
 
   return (
-    <section id="introduction" className="pt-[116px]">
+    <section id="introduction">
       <div className="mx-auto max-w-[1280px] px-6 pb-24 pt-16 md:px-10 md:pb-36 md:pt-24">
-        <div className="grid items-center gap-14 lg:grid-cols-[58fr_42fr] lg:gap-24">
+        <div className="grid items-center gap-14 lg:grid-cols-[54fr_46fr] lg:gap-24">
           {/* Text column */}
           <div className="min-w-0">
             <Reveal>
