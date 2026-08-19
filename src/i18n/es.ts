@@ -289,6 +289,7 @@ export const es: Content = {
     languages: ["Inglés — C1", "Francés — B2"],
     certifications: [
       "Inside LVMH — Creación y branding",
+      "Certificación de Google Analytics",
       "Programa avanzado de formación en marketing digital",
     ],
     achievements: [
