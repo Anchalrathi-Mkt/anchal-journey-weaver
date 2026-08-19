@@ -1,3 +1,5 @@
+import anchalPortrait from "@/assets/anchal-portrait.png.asset.json";
+
 export const profile = {
   name: "Anchal Rathi",
   positioning: "Digital Marketing & Data Analytics",
