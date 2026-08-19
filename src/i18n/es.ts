@@ -38,7 +38,7 @@ export const es: Content = {
     company: "Latina S.A.M.",
     location: "Mónaco",
     role: "Becaria de Marketing",
-    dates: "Abril 2026 — Agosto 2026",
+    dates: "Marzo 2026 — Julio 2026",
     opening:
       "En Latina S.A.M. trabajé en marketing digital, desarrollo web, CRM y análisis de marketing. Mi función consistió en construir la presencia digital de la empresa, mejorar su visibilidad online, gestionar campañas de CRM, analizar el rendimiento de marketing y apoyar la comunicación B2B.",
     sitemap: [
@@ -245,12 +245,19 @@ export const es: Content = {
         "Landing pages",
         "Marketing en LinkedIn",
         "Contenido B2B",
+        "HTML / CSS",
+        "Diseño UX / UI",
+        "GitHub",
+        "Canva",
+        "CapCut",
+        "Notion",
       ],
     },
     {
       heading: "Datos y analítica",
       items: [
         "Power BI",
+        "GA4",
         "Análisis de datos",
         "Excel",
         "SQL",
@@ -279,10 +286,10 @@ export const es: Content = {
     languagesLabel: "Idiomas",
     certificationsLabel: "Certificaciones",
     achievementsLabel: "Logros",
-    languages: ["Inglés — C2", "Francés — B2"],
+    languages: ["Inglés — C1", "Francés — B2"],
     certifications: [
       "Inside LVMH — Creación y branding",
-      "Inside LVMH — Operaciones y supply",
+      "Certificación de Google Analytics",
       "Programa avanzado de formación en marketing digital",
     ],
     achievements: [
