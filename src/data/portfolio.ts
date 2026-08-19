@@ -8,7 +8,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/anchal-rathi-680802141",
   linkedinLabel: "linkedin.com/in/anchal-rathi-680802141",
   cv: "/Anchal_Rathi_CV.pdf",
-  portrait: "/images/anchal-profile.jpg",
+  portrait: anchalPortrait.url,
 };
 
 export const latinaWebsite = "https://latina-mc.shock01.fridaycloud.nl/";
