@@ -37,7 +37,7 @@ export const en = {
     company: "Latina S.A.M.",
     location: "Monaco",
     role: "Marketing Intern",
-    dates: "April 2026 — August 2026",
+    dates: "March 2026 — July 2026",
     opening:
       "At Latina S.A.M., I worked across digital marketing, website development, CRM and marketing analytics. My role involved building the company's digital presence, improving online visibility, managing CRM campaigns, analysing marketing performance and supporting B2B communication.",
     sitemap: [
@@ -244,12 +244,19 @@ export const en = {
         "Landing Pages",
         "LinkedIn Marketing",
         "B2B Content",
+        "HTML / CSS",
+        "UX / UI Design",
+        "GitHub",
+        "Canva",
+        "CapCut",
+        "Notion",
       ],
     },
     {
       heading: "Data & Analytics",
       items: [
         "Power BI",
+        "GA4",
         "Data Analysis",
         "Excel",
         "SQL",
@@ -278,10 +285,10 @@ export const en = {
     languagesLabel: "Languages",
     certificationsLabel: "Certifications",
     achievementsLabel: "Achievements",
-    languages: ["English — C2", "French — B2"],
+    languages: ["English — C1", "French — B2"],
     certifications: [
       "Inside LVMH — Creation & Branding",
-      "Inside LVMH — Operations & Supply",
+      "Google Analytics Certification",
       "Advanced Internet Marketing Training Program",
     ],
     achievements: [
