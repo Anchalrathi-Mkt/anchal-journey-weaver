@@ -75,13 +75,12 @@ function Index() {
       <main>
         <HeroSlider />
         <Introduction />
-        <Positioning />
+        <AboutMe />
         <Experience />
-        <HowIWork />
-        <BeyondCV />
+        <ProblemsSolved />
         <Skills />
         <Education />
-        <WhyWorkWithMe />
+        <WhatIBring />
         <Contact />
       </main>
 
