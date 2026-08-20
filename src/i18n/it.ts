@@ -11,7 +11,7 @@ export const it: Content = {
 
   intro: {
     greeting: "Ciao, sono Anchal Rathi",
-    tagline: "Marketing digitale | SEO | CRM | Analisi dei dati",
+    tagline: "Digital marketer e analista di dati",
     paragraphs: [
       "Sono una professionista di marketing con oltre due anni di esperienza in marketing digitale, SEO, CRM, sviluppo di siti web, campagne a pagamento e sviluppo commerciale.",
       "Mi concentro sul migliorare la visibilità digitale, generare lead di qualità e utilizzare i dati per capire cosa funziona e dove le aziende possono migliorare.",

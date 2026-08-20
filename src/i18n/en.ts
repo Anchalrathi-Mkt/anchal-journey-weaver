@@ -9,7 +9,7 @@ export const en = {
 
   intro: {
     greeting: "Hi, I'm Anchal Rathi",
-    tagline: "Digital Marketing | SEO | CRM | Data Analytics",
+    tagline: "A digital marketer and data analyst",
     paragraphs: [
       "I'm a marketing professional with 2+ years of experience across digital marketing, SEO, CRM, website development, paid campaigns and business development.",
       "I focus on improving digital visibility, generating better leads and using data to understand what is working and where businesses can improve.",
