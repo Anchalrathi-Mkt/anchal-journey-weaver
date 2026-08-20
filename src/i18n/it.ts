@@ -41,7 +41,7 @@ export const it: Content = {
     company: "Latina S.A.M.",
     location: "Monaco",
     role: "Stagista Marketing",
-    dates: "Aprile – Agosto 2026",
+    dates: "Marzo – Luglio 2026",
     opening:
       "Ho lavorato su marketing digitale, CRM, sviluppo del sito web e analisi. Ho progettato e costruito il sito web corporate di Latina S.A.M. su Shopware, lavorando sulla struttura delle pagine, sui contenuti e sulla navigazione. Ho anche lavorato sulla SEO del sito Wine & Spirits Europe, migliorando la visibilità sui motori di ricerca dal 14 % al 56 %.",
     body:
