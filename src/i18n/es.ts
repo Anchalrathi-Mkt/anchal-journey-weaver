@@ -11,7 +11,7 @@ export const es: Content = {
 
   intro: {
     greeting: "Hola, soy Anchal Rathi",
-    tagline: "Marketing digital | SEO | CRM | Análisis de datos",
+    tagline: "Digital Marketer y Analista de datos",
     paragraphs: [
       "Soy una profesional de marketing con más de dos años de experiencia en marketing digital, SEO, CRM, desarrollo de sitios web, campañas de pago y desarrollo de negocio.",
       "Me centro en mejorar la visibilidad digital, generar mejores leads y utilizar los datos para entender qué funciona y dónde pueden mejorar las empresas.",
