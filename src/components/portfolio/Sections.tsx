@@ -1,13 +1,13 @@
 import { profile } from "@/data/portfolio";
 import { useI18n } from "@/i18n";
-import { Reveal, Label } from "./primitives";
+import { Reveal, Label, ListColumns } from "./primitives";
 
 export function Skills() {
   const { t } = useI18n();
   const ui = t.ui.skills;
 
   return (
-    <section id="skills" className="border-t border-border bg-surface">
+    <section id="skills" className="border-t border-border">
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-36">
         <Reveal>
           <Label>{ui.label}</Label>
@@ -19,23 +19,14 @@ export function Skills() {
           </p>
         </Reveal>
 
-        <div className="mt-20 grid gap-14 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid gap-14 md:grid-cols-2 lg:grid-cols-4">
           {t.skillGroups.map((group, i) => (
             <Reveal key={group.heading} delay={i * 70}>
               <div className="border-t border-border pt-6">
-                <h3 className="font-serif text-[26px] font-light">{group.heading}</h3>
-                <p className="mt-5 text-[16px] leading-[2]">
-                  {group.items.map((item, idx) => (
-                    <span key={item}>
-                      <span className="text-muted-foreground transition-colors duration-300 hover:text-accent">
-                        {item}
-                      </span>
-                      {idx < group.items.length - 1 && (
-                        <span className="mx-2.5 text-border-strong">/</span>
-                      )}
-                    </span>
-                  ))}
-                </p>
+                <h3 className="font-serif text-[22px] font-light">{group.heading}</h3>
+                <div className="mt-5">
+                  <ListColumns items={group.items} columns={1} />
+                </div>
               </div>
             </Reveal>
           ))}
@@ -50,7 +41,7 @@ export function Education() {
   const education = t.education;
 
   return (
-    <section id="education" className="border-t border-border">
+    <section id="education" className="border-t border-border bg-surface">
       <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-10 md:py-36">
         <Reveal>
           <Label>{education.label}</Label>
@@ -61,26 +52,19 @@ export function Education() {
 
         <Reveal delay={80}>
           <div className="mt-20 border-t border-border pt-10">
-            <div className="flex items-baseline justify-between">
-              <span className="display text-[clamp(2.4rem,6vw,4.2rem)]">{education.from}</span>
-              <span aria-hidden className="mx-6 h-px flex-1 bg-border" />
-              <span className="display text-[clamp(2.4rem,6vw,4.2rem)] text-muted-foreground">
-                {education.to}
-              </span>
-            </div>
-
-            <div className="mt-14 grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-20">
+            <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-20">
               <div>
                 <h3 className="font-serif text-[clamp(1.6rem,3vw,2.2rem)] font-light">
                   {education.institution}
                 </h3>
                 <p className="mt-4 text-[15px]">{education.degree}</p>
                 <p className="text-[15px] text-muted-foreground">{education.qualification}</p>
-                <p className="mt-3 label-xs">{education.location}</p>
+                <p className="mt-3 label-xs">
+                  {education.from} — {education.to} · {education.location}
+                </p>
               </div>
-              <div className="max-w-[58ch] space-y-6 text-[17px] leading-[1.8] text-muted-foreground">
+              <div className="max-w-[58ch] text-[17px] leading-[1.8] text-muted-foreground">
                 <p>{education.description}</p>
-                <p>{education.supporting}</p>
               </div>
             </div>
           </div>
@@ -168,6 +152,17 @@ export function Contact() {
                   className="rule-link mt-2 inline-block font-serif text-[clamp(1.2rem,2.4vw,1.7rem)] font-light"
                 >
                   {profile.email}
+                </a>
+              </div>
+              <div>
+                <span className="label-xs block !text-ink-foreground opacity-60">
+                  {ui.phoneLabel}
+                </span>
+                <a
+                  href="tel:+33744767418"
+                  className="rule-link mt-2 inline-block font-serif text-[clamp(1.1rem,2.2vw,1.5rem)] font-light"
+                >
+                  +33 744 76 74 18
                 </a>
               </div>
               <div>

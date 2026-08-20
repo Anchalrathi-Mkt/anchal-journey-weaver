@@ -5,10 +5,9 @@ import { Introduction } from "@/components/portfolio/Introduction";
 import { Experience } from "@/components/portfolio/Experience";
 import { Skills, Education, Contact, Footer } from "@/components/portfolio/Sections";
 import {
-  Positioning,
-  HowIWork,
-  BeyondCV,
-  WhyWorkWithMe,
+  AboutMe,
+  ProblemsSolved,
+  WhatIBring,
 } from "@/components/portfolio/StorySections";
 import { I18nProvider } from "@/i18n";
 
@@ -76,13 +75,12 @@ function Index() {
       <main>
         <HeroSlider />
         <Introduction />
-        <Positioning />
+        <AboutMe />
         <Experience />
-        <HowIWork />
-        <BeyondCV />
+        <ProblemsSolved />
         <Skills />
         <Education />
-        <WhyWorkWithMe />
+        <WhatIBring />
         <Contact />
       </main>
 
