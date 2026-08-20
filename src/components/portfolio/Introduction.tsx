@@ -47,12 +47,11 @@ export function Introduction() {
           {/* Text column */}
           <div className="min-w-0">
             <Reveal>
-              <p className="nav-link text-muted-foreground">{intro.label}</p>
+              <p className="nav-link text-muted-foreground">{intro.greeting}</p>
             </Reveal>
             <Reveal delay={80}>
-              <h1 className="display mt-8 text-[clamp(2.5rem,5.6vw,4.4rem)]">
-                {intro.headlinePre} <span className="script-em">{intro.headlineEm}</span>{" "}
-                {intro.headlinePost}
+              <h1 className="display mt-6 text-[clamp(2.5rem,5.6vw,4.4rem)]">
+                {intro.tagline}
               </h1>
             </Reveal>
 
@@ -79,7 +78,7 @@ export function Introduction() {
             <Reveal delay={420}>
               <div className="mt-10 flex flex-wrap items-center gap-6">
                 <a href="#experience" className="btn-ink">
-                  {intro.viewExperience}
+                  {intro.viewWork}
                 </a>
                 <a
                   href={profile.linkedin}
