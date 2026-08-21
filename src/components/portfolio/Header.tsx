@@ -1,12 +1,19 @@
-import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { profile } from "@/data/portfolio";
 import { useI18n } from "@/i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
+const cvLinks = [
+  { href: profile.cvEn, download: profile.cvEnFile, label: "Download CV – English" },
+  { href: profile.cvFr, download: profile.cvFrFile, label: "Télécharger mon CV – Français" },
+];
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [cvOpen, setCvOpen] = useState(false);
+  const cvRef = useRef<HTMLDivElement>(null);
   const { t } = useI18n();
 
   useEffect(() => {
@@ -17,11 +24,20 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    const onDown = (e: MouseEvent) => {
+      if (cvRef.current && !cvRef.current.contains(e.target as Node)) setCvOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    return () => document.removeEventListener("mousedown", onDown);
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
+
 
   return (
     <header className="fixed inset-x-0 top-0 z-40">
@@ -53,14 +69,41 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={profile.cv}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rule-link nav-link text-accent"
-            >
-              {t.ui.downloadCV}
-            </a>
+            <div ref={cvRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setCvOpen((v) => !v)}
+                aria-expanded={cvOpen}
+                aria-haspopup="menu"
+                className="nav-link flex items-center gap-1.5 text-accent transition-opacity hover:opacity-70"
+              >
+                {t.ui.downloadCV}
+                <ChevronDown
+                  className={`h-3.5 w-3.5 transition-transform duration-300 ${cvOpen ? "rotate-180" : ""}`}
+                  strokeWidth={1.5}
+                />
+              </button>
+              {cvOpen && (
+                <div
+                  role="menu"
+                  className="absolute right-0 top-[calc(100%+14px)] w-[270px] border border-border bg-background shadow-sm"
+                >
+                  {cvLinks.map((cv) => (
+                    <a
+                      key={cv.download}
+                      role="menuitem"
+                      href={cv.href}
+                      download={cv.download}
+                      onClick={() => setCvOpen(false)}
+                      className="nav-link block border-b border-border px-5 py-4 text-foreground/80 transition-colors last:border-b-0 hover:bg-surface hover:text-foreground"
+                    >
+                      {cv.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <span aria-hidden className="h-4 w-px bg-border-strong" />
             <LanguageSwitcher />
           </nav>
@@ -100,14 +143,20 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={profile.cv}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-clay mt-10 self-start"
-            >
-              {t.ui.downloadCV}
-            </a>
+            <div className="mt-10 flex flex-col items-start gap-3">
+              {cvLinks.map((cv, i) => (
+                <a
+                  key={cv.download}
+                  href={cv.href}
+                  download={cv.download}
+                  onClick={() => setOpen(false)}
+                  className={i === 0 ? "btn-clay" : "btn-ink"}
+                >
+                  {cv.label}
+                </a>
+              ))}
+            </div>
+
             <div className="mt-10">
               <LanguageSwitcher />
             </div>
