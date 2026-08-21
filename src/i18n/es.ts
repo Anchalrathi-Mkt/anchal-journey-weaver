@@ -149,7 +149,6 @@ export const es: Content = {
         "Landing pages",
         "HTML / CSS",
         "Diseño UX / UI",
-        "GitHub",
         "Canva",
         "CapCut",
         "Notion",

@@ -149,7 +149,6 @@ export const fr: Content = {
         "Landing pages",
         "HTML / CSS",
         "UX / UI Design",
-        "GitHub",
         "Canva",
         "CapCut",
         "Notion",
