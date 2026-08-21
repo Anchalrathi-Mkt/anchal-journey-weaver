@@ -69,14 +69,41 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={profile.cv}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rule-link nav-link text-accent"
-            >
-              {t.ui.downloadCV}
-            </a>
+            <div ref={cvRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setCvOpen((v) => !v)}
+                aria-expanded={cvOpen}
+                aria-haspopup="menu"
+                className="nav-link flex items-center gap-1.5 text-accent transition-opacity hover:opacity-70"
+              >
+                {t.ui.downloadCV}
+                <ChevronDown
+                  className={`h-3.5 w-3.5 transition-transform duration-300 ${cvOpen ? "rotate-180" : ""}`}
+                  strokeWidth={1.5}
+                />
+              </button>
+              {cvOpen && (
+                <div
+                  role="menu"
+                  className="absolute right-0 top-[calc(100%+14px)] w-[270px] border border-border bg-background shadow-sm"
+                >
+                  {cvLinks.map((cv) => (
+                    <a
+                      key={cv.download}
+                      role="menuitem"
+                      href={cv.href}
+                      download={cv.download}
+                      onClick={() => setCvOpen(false)}
+                      className="nav-link block border-b border-border px-5 py-4 text-foreground/80 transition-colors last:border-b-0 hover:bg-surface hover:text-foreground"
+                    >
+                      {cv.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <span aria-hidden className="h-4 w-px bg-border-strong" />
             <LanguageSwitcher />
           </nav>
