@@ -147,7 +147,6 @@ export const en = {
         "Landing Pages",
         "HTML / CSS",
         "UX / UI Design",
-        "GitHub",
         "Canva",
         "CapCut",
         "Notion",

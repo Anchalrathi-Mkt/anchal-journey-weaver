@@ -149,7 +149,6 @@ export const it: Content = {
         "Landing page",
         "HTML / CSS",
         "Design UX / UI",
-        "GitHub",
         "Canva",
         "CapCut",
         "Notion",
