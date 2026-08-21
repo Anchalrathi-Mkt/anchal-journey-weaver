@@ -143,14 +143,20 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={profile.cv}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-clay mt-10 self-start"
-            >
-              {t.ui.downloadCV}
-            </a>
+            <div className="mt-10 flex flex-col items-start gap-3">
+              {cvLinks.map((cv, i) => (
+                <a
+                  key={cv.download}
+                  href={cv.href}
+                  download={cv.download}
+                  onClick={() => setOpen(false)}
+                  className={i === 0 ? "btn-clay" : "btn-ink"}
+                >
+                  {cv.label}
+                </a>
+              ))}
+            </div>
+
             <div className="mt-10">
               <LanguageSwitcher />
             </div>
