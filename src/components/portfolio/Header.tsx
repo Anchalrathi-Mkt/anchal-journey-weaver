@@ -1,12 +1,19 @@
-import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { profile } from "@/data/portfolio";
 import { useI18n } from "@/i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
+const cvLinks = [
+  { href: profile.cvEn, download: profile.cvEnFile, label: "Download CV – English" },
+  { href: profile.cvFr, download: profile.cvFrFile, label: "Télécharger mon CV – Français" },
+];
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [cvOpen, setCvOpen] = useState(false);
+  const cvRef = useRef<HTMLDivElement>(null);
   const { t } = useI18n();
 
   useEffect(() => {
@@ -17,11 +24,20 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    const onDown = (e: MouseEvent) => {
+      if (cvRef.current && !cvRef.current.contains(e.target as Node)) setCvOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    return () => document.removeEventListener("mousedown", onDown);
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
+
 
   return (
     <header className="fixed inset-x-0 top-0 z-40">
