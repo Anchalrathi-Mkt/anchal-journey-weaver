@@ -103,6 +103,8 @@ export function Experience() {
             dates={latina.dates}
             opening={latina.opening}
             body={latina.body}
+            linksLabel={ui.projectsLabel}
+            links={latinaRepos}
           />
           <RoleCard
             index="02"
