@@ -9,6 +9,8 @@ function RoleCard({
   dates,
   opening,
   body,
+  linksLabel,
+  links,
 }: {
   index: string;
   company: string;
@@ -17,6 +19,8 @@ function RoleCard({
   dates: string;
   opening: string;
   body: string;
+  linksLabel?: string;
+  links?: { label: string; href: string }[];
 }) {
   return (
     <div className="grid min-w-0 grid-cols-1 gap-8 border-t border-border pt-10 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-16">
@@ -32,10 +36,48 @@ function RoleCard({
           <p>{opening}</p>
           <p>{body}</p>
         </div>
+        {links && links.length > 0 && (
+          <div className="mt-8 max-w-[62ch] border-t border-border pt-6">
+            {linksLabel && <p className="label-xs">{linksLabel}</p>}
+            <ul className="mt-4 space-y-2">
+              {links.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-baseline gap-2 text-[15px] text-foreground transition-colors hover:text-muted-foreground"
+                  >
+                    <span className="border-b border-foreground/25 pb-0.5 group-hover:border-foreground/60">
+                      {l.label}
+                    </span>
+                    <span aria-hidden className="text-muted-foreground">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </Reveal>
     </div>
   );
 }
+
+const latinaRepos = [
+  {
+    label: "HubSpot CRM & Marketing Project",
+    href: "https://github.com/Anchalrathi-Mkt/hubspot-crm-marketing-project",
+  },
+  {
+    label: "Power BI CRM Dashboard",
+    href: "https://github.com/Anchalrathi-Mkt/power-bi-crm-dashboard",
+  },
+  {
+    label: "SEO Optimization Project",
+    href: "https://github.com/Anchalrathi-Mkt/seo-optimization-project",
+  },
+];
+
 
 export function Experience() {
   const { t } = useI18n();
@@ -61,6 +103,8 @@ export function Experience() {
             dates={latina.dates}
             opening={latina.opening}
             body={latina.body}
+            linksLabel={ui.projectsLabel}
+            links={latinaRepos}
           />
           <RoleCard
             index="02"

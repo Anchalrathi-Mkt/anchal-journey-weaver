@@ -204,6 +204,7 @@ export const fr: Content = {
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
     language: "Langue",
+    projectsLabel: "Dépôts de projets",
 
     skills: {
       label: "04 / Compétences",
