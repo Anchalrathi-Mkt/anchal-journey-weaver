@@ -204,6 +204,7 @@ export const it: Content = {
     openMenu: "Apri menu",
     closeMenu: "Chiudi menu",
     language: "Lingua",
+    projectsLabel: "Repository dei progetti",
 
     skills: {
       label: "04 / Competenze",

@@ -202,6 +202,7 @@ export const en = {
     openMenu: "Open menu",
     closeMenu: "Close menu",
     language: "Language",
+    projectsLabel: "Project repositories",
 
     skills: {
       label: "04 / Skills",
