@@ -12,8 +12,8 @@ export const profile = {
   cv: cvEnAsset.url,
   cvEn: cvEnAsset.url,
   cvFr: cvFrAsset.url,
-  cvEnFile: "Anchal_Rathi_CV_2027_updated.pdf",
-  cvFrFile: "Anchal_Rathi_CV_French_2027_updated.pdf",
+  cvEnFile: "Anchal_Rathi_CV_2027.pdf",
+  cvFrFile: "Anchal_Rathi_CV_French_2027.pdf",
   portrait: anchalPortrait.url,
 };
 
