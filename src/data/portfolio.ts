@@ -1,6 +1,6 @@
 import anchalPortrait from "@/assets/anchal-portrait.png.asset.json";
-import cvEnAsset from "@/assets/cv-en.pdf.asset.json";
-import cvFrAsset from "@/assets/cv-fr.pdf.asset.json";
+import cvEnAsset from "@/assets/cv-en-2027.pdf.asset.json";
+import cvFrAsset from "@/assets/cv-fr-2027.pdf.asset.json";
 
 export const profile = {
   name: "Anchal Rathi",
@@ -12,8 +12,8 @@ export const profile = {
   cv: cvEnAsset.url,
   cvEn: cvEnAsset.url,
   cvFr: cvFrAsset.url,
-  cvEnFile: "Anchal_Rathi_CV_EN.pdf",
-  cvFrFile: "Anchal_Rathi_CV_FR.pdf",
+  cvEnFile: "Anchal_Rathi_CV_2027_updated.pdf",
+  cvFrFile: "Anchal_Rathi_CV_French_2027_updated.pdf",
   portrait: anchalPortrait.url,
 };
 

@@ -39,7 +39,7 @@ export const en = {
     company: "Latina S.A.M.",
     location: "Monaco",
     role: "Marketing Intern",
-    dates: "March – July 2026",
+    dates: "March – August 2026",
     opening:
       "Worked across digital marketing, CRM, website development and analytics. I designed and built the Latina S.A.M. corporate website on Shopware, working on page structure, content and navigation. I also worked on SEO for the Wine & Spirits Europe website, improving search visibility from 14% to 56%.",
     body:
@@ -145,7 +145,9 @@ export const en = {
         "Website Structure",
         "Content Organisation",
         "Landing Pages",
-        "HTML / CSS",
+        "HTML",
+        "CSS",
+        "CMS",
         "UX / UI Design",
         "Canva",
         "CapCut",
