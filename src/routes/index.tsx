@@ -76,10 +76,10 @@ function Index() {
         <HeroSlider />
         <Introduction />
         <AboutMe />
+        <Education />
         <Experience />
         <ProblemsSolved />
         <Skills />
-        <Education />
         <WhatIBring />
         <Contact />
       </main>
