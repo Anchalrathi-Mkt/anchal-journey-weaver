@@ -3,9 +3,9 @@ import type { Content } from "./en";
 export const fr: Content = {
   nav: [
     { label: "Introduction", href: "#introduction" },
+    { label: "Formation", href: "#education" },
     { label: "Expérience", href: "#experience" },
     { label: "Compétences", href: "#skills" },
-    { label: "Formation", href: "#education" },
     { label: "Contact", href: "#contact" },
   ],
 
@@ -32,7 +32,7 @@ export const fr: Content = {
   },
 
   experienceIntro: {
-    label: "01 / Expérience",
+    label: "02 / Expérience",
     heading: "Expérience professionnelle",
     text: "Mon expérience couvre le marketing digital, le SEO, le CRM, le développement de sites web, les campagnes payantes et le développement commercial dans différents secteurs et marchés.",
   },
@@ -71,7 +71,7 @@ export const fr: Content = {
   },
 
   problemsSolved: {
-    label: "02 / Problèmes résolus",
+    label: "03 / Problèmes résolus",
     heading: "Problèmes que j'ai résolus",
     items: [
       {
@@ -94,7 +94,7 @@ export const fr: Content = {
   },
 
   whatIBring: {
-    label: "03 / Ce que j'apporte",
+    label: "05 / Ce que j'apporte",
     heading: "Ce que j'apporte",
     intro:
       "Je combine le marketing digital avec la donnée et la réflexion business. Ma force ne réside pas seulement dans la création de campagnes ou de contenus, mais aussi dans la compréhension de la contribution de ces activités aux leads, à l'engagement, au trafic et à la croissance business.",
@@ -173,7 +173,7 @@ export const fr: Content = {
   ],
 
   education: {
-    label: "04 / Formation",
+    label: "01 / Formation",
     heading: "Formation",
     entries: [
       {

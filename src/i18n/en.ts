@@ -1,9 +1,9 @@
 export const en = {
   nav: [
     { label: "Introduction", href: "#introduction" },
+    { label: "Education", href: "#education" },
     { label: "Experience", href: "#experience" },
     { label: "Skills", href: "#skills" },
-    { label: "Education", href: "#education" },
     { label: "Contact", href: "#contact" },
   ],
 
@@ -30,7 +30,7 @@ export const en = {
   },
 
   experienceIntro: {
-    label: "01 / Experience",
+    label: "02 / Experience",
     heading: "Work Experience",
     text: "My experience spans digital marketing, SEO, CRM, website development, paid campaigns and business development across different industries and markets.",
   },
@@ -69,7 +69,7 @@ export const en = {
   },
 
   problemsSolved: {
-    label: "02 / Problems I've Solved",
+    label: "03 / Problems I've Solved",
     heading: "Problems I've Solved",
     items: [
       {
@@ -92,7 +92,7 @@ export const en = {
   },
 
   whatIBring: {
-    label: "03 / What I Bring",
+    label: "05 / What I Bring",
     heading: "What I Bring",
     intro:
       "I combine digital marketing with data and business thinking. My strength is not only creating campaigns or content, but also understanding how those activities contribute to leads, engagement, traffic and business growth.",
@@ -171,7 +171,7 @@ export const en = {
   ],
 
   education: {
-    label: "04 / Education",
+    label: "01 / Education",
     heading: "Education",
     entries: [
       {
@@ -231,7 +231,7 @@ export const en = {
     projectsLabel: "Project repositories",
 
     skills: {
-      label: "04 / Skills",
+      label: "04 / Skills & Expertise",
       headingA: "Skills &",
       headingB: "Expertise",
       intro:
