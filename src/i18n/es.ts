@@ -3,9 +3,9 @@ import type { Content } from "./en";
 export const es: Content = {
   nav: [
     { label: "Introducción", href: "#introduction" },
+    { label: "Formación", href: "#education" },
     { label: "Experiencia", href: "#experience" },
     { label: "Competencias", href: "#skills" },
-    { label: "Formación", href: "#education" },
     { label: "Contacto", href: "#contact" },
   ],
 
