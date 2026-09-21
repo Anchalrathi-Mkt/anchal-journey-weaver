@@ -51,22 +51,31 @@ export function Education() {
         </Reveal>
 
         <Reveal delay={80}>
-          <div className="mt-20 border-t border-border pt-10">
-            <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-20">
-              <div>
-                <h3 className="font-serif text-[clamp(1.6rem,3vw,2.2rem)] font-light">
-                  {education.institution}
-                </h3>
-                <p className="mt-4 text-[15px]">{education.degree}</p>
-                <p className="text-[15px] text-muted-foreground">{education.qualification}</p>
-                <p className="mt-3 label-xs">
-                  {education.from} — {education.to} · {education.location}
-                </p>
+          <div className="mt-20 space-y-16">
+            {education.entries.map((entry) => (
+              <div
+                key={`${entry.institution}-${entry.degree}`}
+                className="border-t border-border pt-10"
+              >
+                <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-20">
+                  <div>
+                    <h3 className="font-serif text-[clamp(1.6rem,3vw,2.2rem)] font-light">
+                      {entry.institution}
+                    </h3>
+                    <p className="mt-4 text-[15px]">{entry.degree}</p>
+                    {entry.qualification && (
+                      <p className="text-[15px] text-muted-foreground">{entry.qualification}</p>
+                    )}
+                    <p className="mt-3 label-xs">
+                      {entry.from} — {entry.to} · {entry.location}
+                    </p>
+                  </div>
+                  <div className="max-w-[58ch] text-[17px] leading-[1.8] text-muted-foreground">
+                    <p>{entry.description}</p>
+                  </div>
+                </div>
               </div>
-              <div className="max-w-[58ch] text-[17px] leading-[1.8] text-muted-foreground">
-                <p>{education.description}</p>
-              </div>
-            </div>
+            ))}
           </div>
         </Reveal>
 
