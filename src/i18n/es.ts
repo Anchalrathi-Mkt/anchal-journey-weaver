@@ -32,7 +32,7 @@ export const es: Content = {
   },
 
   experienceIntro: {
-    label: "01 / Experiencia",
+    label: "02 / Experiencia",
     heading: "Experiencia profesional",
     text: "Mi experiencia abarca marketing digital, SEO, CRM, desarrollo web, campañas de pago y desarrollo de negocio en distintos sectores y mercados.",
   },
@@ -71,7 +71,7 @@ export const es: Content = {
   },
 
   problemsSolved: {
-    label: "02 / Problemas resueltos",
+    label: "03 / Problemas resueltos",
     heading: "Problemas que he resuelto",
     items: [
       {
@@ -94,7 +94,7 @@ export const es: Content = {
   },
 
   whatIBring: {
-    label: "03 / Lo que aporto",
+    label: "05 / Lo que aporto",
     heading: "Lo que aporto",
     intro:
       "Combino el marketing digital con los datos y el pensamiento de negocio. Mi fortaleza no es solo crear campañas o contenidos, sino también entender cómo estas actividades contribuyen a los leads, el engagement, el tráfico y el crecimiento empresarial.",
@@ -173,7 +173,7 @@ export const es: Content = {
   ],
 
   education: {
-    label: "04 / Formación",
+    label: "01 / Formación",
     heading: "Formación",
     entries: [
       {
