@@ -175,14 +175,38 @@ export const es: Content = {
   education: {
     label: "04 / Formación",
     heading: "Formación",
-    institution: "Grenoble École de Management",
-    degree: "MSc Digital Marketing & Data Analytics",
-    qualification: "Bac+5",
-    from: "2025",
-    to: "2027",
-    location: "Francia",
-    description:
-      "Desarrollo de experiencia en marketing digital, SEO, Power BI, SQL, Python y analítica de marketing.",
+    entries: [
+      {
+        institution: "Grenoble École de Management",
+        degree: "MSc Digital Marketing & Data Analytics",
+        qualification: "Bac+5",
+        from: "2025",
+        to: "2027",
+        location: "Francia",
+        description:
+          "Desarrollo de experiencia en marketing digital, SEO, Power BI, SQL, Python y analítica de marketing.",
+      },
+      {
+        institution: "Delhi School of Business",
+        degree: "Diploma de Posgrado en Gestión (PGDM)",
+        qualification: "Marketing y Analítica de Datos",
+        from: "2022",
+        to: "2024",
+        location: "Delhi, India",
+        description:
+          "Programa enfocado en estrategia de marketing, comportamiento del consumidor, investigación de mercados, marketing digital y analítica de datos.",
+      },
+      {
+        institution: "Universidad de Delhi",
+        degree: "Licenciatura en Comercio (B.Com)",
+        qualification: "",
+        from: "2019",
+        to: "2022",
+        location: "Delhi, India",
+        description:
+          "Programa de pregrado que abarca comercio, contabilidad, economía y fundamentos de negocios.",
+      },
+    ],
     additional: "Información adicional",
     languagesLabel: "Idiomas",
     certificationsLabel: "Certificaciones",
