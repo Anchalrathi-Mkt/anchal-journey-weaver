@@ -112,8 +112,10 @@ export const en = {
       heading: "Marketing & Growth",
       items: [
         "SEO",
+        "GEO (Generative Engine Optimization)",
         "SEM",
         "PPC",
+        "Go-To-Market (GTM)",
         "Data Analysis",
         "Google Analytics 4 (GA4)",
         "LinkedIn Marketing",

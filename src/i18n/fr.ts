@@ -114,8 +114,10 @@ export const fr: Content = {
       heading: "Marketing & Croissance",
       items: [
         "SEO",
+        "GEO (Generative Engine Optimization)",
         "SEM",
         "PPC",
+        "Go-to-market (GTM)",
         "Analyse de données",
         "Google Analytics 4 (GA4)",
         "Marketing LinkedIn",
