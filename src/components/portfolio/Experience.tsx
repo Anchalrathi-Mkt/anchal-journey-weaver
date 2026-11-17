@@ -76,6 +76,10 @@ const latinaRepos = [
     label: "SEO Optimization Project",
     href: "https://github.com/Anchalrathi-Mkt/seo-optimization-project",
   },
+  {
+    label: "Social Media Marketing Portfolio",
+    href: "https://github.com/Anchalrathi-Mkt/social-media-marketing-portfolio",
+  },
 ];
 
 
